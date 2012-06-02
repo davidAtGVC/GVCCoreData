@@ -1,0 +1,759 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		051B25D71557A88B001B4377 /* NSPropertyDescription+GVCCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 051B25D51557A88B001B4377 /* NSPropertyDescription+GVCCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		051B25D81557A88B001B4377 /* NSPropertyDescription+GVCCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 051B25D61557A88B001B4377 /* NSPropertyDescription+GVCCoreData.m */; };
+		051B25E51557CA03001B4377 /* GVCCSVDataOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 051B25E31557CA03001B4377 /* GVCCSVDataOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		051B25E61557CA03001B4377 /* GVCCSVDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 051B25E41557CA03001B4377 /* GVCCSVDataOperation.m */; };
+		051B25F71558035F001B4377 /* GVCXMLDataOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 051B25F51558035F001B4377 /* GVCXMLDataOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		051B25F81558035F001B4377 /* GVCXMLDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 051B25F61558035F001B4377 /* GVCXMLDataOperation.m */; };
+		0563F5861537D04500BC7D2D /* GVCCoreDataUIAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0563F5841537D04500BC7D2D /* GVCCoreDataUIAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0563F5871537D04500BC7D2D /* GVCCoreDataUIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0563F5851537D04500BC7D2D /* GVCCoreDataUIAppDelegate.m */; };
+		0594660D152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05946607152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0594660E152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 05946608152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.m */; };
+		0594660F152BD75C004A8B1C /* NSManagedObject+GVCCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05946609152BD75C004A8B1C /* NSManagedObject+GVCCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05946610152BD75C004A8B1C /* NSManagedObject+GVCCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0594660A152BD75C004A8B1C /* NSManagedObject+GVCCoreData.m */; };
+		05946611152BD75C004A8B1C /* NSManagedObjectContext+GVCCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 0594660B152BD75C004A8B1C /* NSManagedObjectContext+GVCCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05946612152BD75C004A8B1C /* NSManagedObjectContext+GVCCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0594660C152BD75C004A8B1C /* NSManagedObjectContext+GVCCoreData.m */; };
+		05946627152BD93F004A8B1C /* GVCDataOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 05946625152BD93F004A8B1C /* GVCDataOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05946628152BD93F004A8B1C /* GVCDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 05946626152BD93F004A8B1C /* GVCDataOperation.m */; };
+		05D00F9B155BCD05009F2837 /* GVCDataListTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D00F99155BCD05009F2837 /* GVCDataListTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05D00F9C155BCD05009F2837 /* GVCDataListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D00F9A155BCD05009F2837 /* GVCDataListTableViewController.m */; };
+		05D00F9F155BCD32009F2837 /* GVCUIViewSearchableTableController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D00F9D155BCD32009F2837 /* GVCUIViewSearchableTableController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05D00FA0155BCD32009F2837 /* GVCUIViewSearchableTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D00F9E155BCD32009F2837 /* GVCUIViewSearchableTableController.m */; };
+		05D185901503C47700EDBE80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D1858F1503C47700EDBE80 /* Foundation.framework */; };
+		05D1859E1503C47900EDBE80 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D1859D1503C47900EDBE80 /* SenTestingKit.framework */; };
+		05D185A01503C47900EDBE80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D1859F1503C47900EDBE80 /* UIKit.framework */; };
+		05D185A11503C47900EDBE80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D1858F1503C47700EDBE80 /* Foundation.framework */; };
+		05D185A41503C47900EDBE80 /* libGVCCoreData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D1858C1503C47700EDBE80 /* libGVCCoreData.a */; };
+		05D185AA1503C47900EDBE80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05D185A81503C47900EDBE80 /* InfoPlist.strings */; };
+		05D185AD1503C47A00EDBE80 /* GVCCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D185AC1503C47A00EDBE80 /* GVCCoreDataTests.m */; };
+		05D185D51503C4DD00EDBE80 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D185D31503C4DD00EDBE80 /* CoreData.framework */; };
+		05D185D61503C4DD00EDBE80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D185D41503C4DD00EDBE80 /* UIKit.framework */; };
+		05D185F61503C6B400EDBE80 /* GVCDataFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D185EB1503C6B400EDBE80 /* GVCDataFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05D185F71503C6B400EDBE80 /* GVCDataFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D185EC1503C6B400EDBE80 /* GVCDataFunctions.m */; };
+		05D185F81503C6B400EDBE80 /* GVCManagedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D185ED1503C6B400EDBE80 /* GVCManagedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05D185F91503C6B400EDBE80 /* GVCManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D185EE1503C6B400EDBE80 /* GVCManagedObject.m */; };
+		05D186B415040F5F00EDBE80 /* GVCCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D186B315040F5F00EDBE80 /* GVCCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0563F55F1537CD9B00BC7D2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05D185C21503C4A900EDBE80 /* GVCUIKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 05CA0AEB14F7F69E001C8A68;
+			remoteInfo = GVCUIKit;
+		};
+		05D185A21503C47900EDBE80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05D185831503C47700EDBE80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05D1858B1503C47700EDBE80;
+			remoteInfo = GVCCoreData;
+		};
+		05D185BE1503C49B00EDBE80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05D185B61503C49A00EDBE80 /* GVCFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 056F5930147EE84D0076010D;
+			remoteInfo = GVCFoundation;
+		};
+		05D185C01503C49B00EDBE80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05D185B61503C49A00EDBE80 /* GVCFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 056F5940147EE84D0076010D;
+			remoteInfo = GVCFoundationTests;
+		};
+		05D185CB1503C4A900EDBE80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05D185C21503C4A900EDBE80 /* GVCUIKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 05CA0AEC14F7F69E001C8A68;
+			remoteInfo = GVCUIKit;
+		};
+		05D185CD1503C4A900EDBE80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05D185C21503C4A900EDBE80 /* GVCUIKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 05CA0AFC14F7F69F001C8A68;
+			remoteInfo = GVCUIKitTests;
+		};
+		05D185D11503C4C100EDBE80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05D185B61503C49A00EDBE80 /* GVCFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 056F592F147EE84D0076010D;
+			remoteInfo = GVCFoundation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		051B25D51557A88B001B4377 /* NSPropertyDescription+GVCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPropertyDescription+GVCCoreData.h"; sourceTree = "<group>"; };
+		051B25D61557A88B001B4377 /* NSPropertyDescription+GVCCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPropertyDescription+GVCCoreData.m"; sourceTree = "<group>"; };
+		051B25E31557CA03001B4377 /* GVCCSVDataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCCSVDataOperation.h; sourceTree = "<group>"; };
+		051B25E41557CA03001B4377 /* GVCCSVDataOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCCSVDataOperation.m; sourceTree = "<group>"; };
+		051B25E81557DDAE001B4377 /* human.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.h.motemplate; sourceTree = "<group>"; };
+		051B25E91557DDAE001B4377 /* human.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.m.motemplate; sourceTree = "<group>"; };
+		051B25EA1557DDAE001B4377 /* machine.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.h.motemplate; sourceTree = "<group>"; };
+		051B25EB1557DDAE001B4377 /* machine.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.m.motemplate; sourceTree = "<group>"; };
+		051B25F51558035F001B4377 /* GVCXMLDataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCXMLDataOperation.h; sourceTree = "<group>"; };
+		051B25F61558035F001B4377 /* GVCXMLDataOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCXMLDataOperation.m; sourceTree = "<group>"; };
+		0563F5841537D04500BC7D2D /* GVCCoreDataUIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCCoreDataUIAppDelegate.h; sourceTree = "<group>"; };
+		0563F5851537D04500BC7D2D /* GVCCoreDataUIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCCoreDataUIAppDelegate.m; sourceTree = "<group>"; };
+		05946607152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEntityDescription+GVCCoreData.h"; sourceTree = "<group>"; };
+		05946608152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSEntityDescription+GVCCoreData.m"; sourceTree = "<group>"; };
+		05946609152BD75C004A8B1C /* NSManagedObject+GVCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+GVCCoreData.h"; sourceTree = "<group>"; };
+		0594660A152BD75C004A8B1C /* NSManagedObject+GVCCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+GVCCoreData.m"; sourceTree = "<group>"; };
+		0594660B152BD75C004A8B1C /* NSManagedObjectContext+GVCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+GVCCoreData.h"; sourceTree = "<group>"; };
+		0594660C152BD75C004A8B1C /* NSManagedObjectContext+GVCCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+GVCCoreData.m"; sourceTree = "<group>"; };
+		05946625152BD93F004A8B1C /* GVCDataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCDataOperation.h; sourceTree = "<group>"; };
+		05946626152BD93F004A8B1C /* GVCDataOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCDataOperation.m; sourceTree = "<group>"; };
+		05D00F99155BCD05009F2837 /* GVCDataListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCDataListTableViewController.h; sourceTree = "<group>"; };
+		05D00F9A155BCD05009F2837 /* GVCDataListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCDataListTableViewController.m; sourceTree = "<group>"; };
+		05D00F9D155BCD32009F2837 /* GVCUIViewSearchableTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCUIViewSearchableTableController.h; sourceTree = "<group>"; };
+		05D00F9E155BCD32009F2837 /* GVCUIViewSearchableTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCUIViewSearchableTableController.m; sourceTree = "<group>"; };
+		05D1858C1503C47700EDBE80 /* libGVCCoreData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGVCCoreData.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		05D1858F1503C47700EDBE80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		05D185931503C47800EDBE80 /* GVCCoreData-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GVCCoreData-Prefix.pch"; sourceTree = "<group>"; };
+		05D1859C1503C47900EDBE80 /* GVCCoreDataTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GVCCoreDataTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05D1859D1503C47900EDBE80 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		05D1859F1503C47900EDBE80 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		05D185A71503C47900EDBE80 /* GVCCoreDataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GVCCoreDataTests-Info.plist"; sourceTree = "<group>"; };
+		05D185A91503C47900EDBE80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		05D185AB1503C47A00EDBE80 /* GVCCoreDataTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVCCoreDataTests.h; sourceTree = "<group>"; };
+		05D185AC1503C47A00EDBE80 /* GVCCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVCCoreDataTests.m; sourceTree = "<group>"; };
+		05D185B61503C49A00EDBE80 /* GVCFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GVCFoundation.xcodeproj; path = ../GVCFoundation/GVCFoundation.xcodeproj; sourceTree = "<group>"; };
+		05D185C21503C4A900EDBE80 /* GVCUIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GVCUIKit.xcodeproj; path = ../GVCUIKit/GVCUIKit.xcodeproj; sourceTree = "<group>"; };
+		05D185D31503C4DD00EDBE80 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		05D185D41503C4DD00EDBE80 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		05D185D81503C56800EDBE80 /* BuildKitHeader.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = BuildKitHeader.sh; sourceTree = "<group>"; };
+		05D185D91503C56800EDBE80 /* GitIgnore.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = GitIgnore.txt; sourceTree = "<group>"; };
+		05D185DA1503C56800EDBE80 /* GVCDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = GVCDebug.xcconfig; sourceTree = "<group>"; };
+		05D185DB1503C56800EDBE80 /* GVCRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = GVCRelease.xcconfig; sourceTree = "<group>"; };
+		05D185DD1503C56800EDBE80 /* GVC License.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = "GVC License.md"; sourceTree = "<group>"; };
+		05D185E01503C56800EDBE80 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		05D185E11503C56800EDBE80 /* templateInstall.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = templateInstall.sh; sourceTree = "<group>"; };
+		05D185EB1503C6B400EDBE80 /* GVCDataFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCDataFunctions.h; sourceTree = "<group>"; };
+		05D185EC1503C6B400EDBE80 /* GVCDataFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCDataFunctions.m; sourceTree = "<group>"; };
+		05D185ED1503C6B400EDBE80 /* GVCManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCManagedObject.h; sourceTree = "<group>"; };
+		05D185EE1503C6B400EDBE80 /* GVCManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCManagedObject.m; sourceTree = "<group>"; };
+		05D186B315040F5F00EDBE80 /* GVCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCCoreData.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05D185891503C47700EDBE80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D185D51503C4DD00EDBE80 /* CoreData.framework in Frameworks */,
+				05D185D61503C4DD00EDBE80 /* UIKit.framework in Frameworks */,
+				05D185901503C47700EDBE80 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05D185981503C47900EDBE80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D1859E1503C47900EDBE80 /* SenTestingKit.framework in Frameworks */,
+				05D185A01503C47900EDBE80 /* UIKit.framework in Frameworks */,
+				05D185A11503C47900EDBE80 /* Foundation.framework in Frameworks */,
+				05D185A41503C47900EDBE80 /* libGVCCoreData.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		051B25E71557DDAE001B4377 /* mogenerate */ = {
+			isa = PBXGroup;
+			children = (
+				051B25E81557DDAE001B4377 /* human.h.motemplate */,
+				051B25E91557DDAE001B4377 /* human.m.motemplate */,
+				051B25EA1557DDAE001B4377 /* machine.h.motemplate */,
+				051B25EB1557DDAE001B4377 /* machine.m.motemplate */,
+			);
+			path = mogenerate;
+			sourceTree = "<group>";
+		};
+		0563F5591537CCFF00BC7D2D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				05D00F98155BCD05009F2837 /* viewcontroller */,
+				0563F5841537D04500BC7D2D /* GVCCoreDataUIAppDelegate.h */,
+				0563F5851537D04500BC7D2D /* GVCCoreDataUIAppDelegate.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		05946624152BD93F004A8B1C /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				05946625152BD93F004A8B1C /* GVCDataOperation.h */,
+				05946626152BD93F004A8B1C /* GVCDataOperation.m */,
+				051B25E31557CA03001B4377 /* GVCCSVDataOperation.h */,
+				051B25E41557CA03001B4377 /* GVCCSVDataOperation.m */,
+				051B25F51558035F001B4377 /* GVCXMLDataOperation.h */,
+				051B25F61558035F001B4377 /* GVCXMLDataOperation.m */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		05D00F98155BCD05009F2837 /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				05D00F99155BCD05009F2837 /* GVCDataListTableViewController.h */,
+				05D00F9A155BCD05009F2837 /* GVCDataListTableViewController.m */,
+				05D00F9D155BCD32009F2837 /* GVCUIViewSearchableTableController.h */,
+				05D00F9E155BCD32009F2837 /* GVCUIViewSearchableTableController.m */,
+			);
+			path = viewcontroller;
+			sourceTree = "<group>";
+		};
+		05D185811503C47700EDBE80 = {
+			isa = PBXGroup;
+			children = (
+				05D185B61503C49A00EDBE80 /* GVCFoundation.xcodeproj */,
+				05D185C21503C4A900EDBE80 /* GVCUIKit.xcodeproj */,
+				05D185911503C47800EDBE80 /* GVCCoreData */,
+				05D185A51503C47900EDBE80 /* GVCCoreDataTests */,
+				05D1858E1503C47700EDBE80 /* Frameworks */,
+				05D1858D1503C47700EDBE80 /* Products */,
+				05D185D71503C56700EDBE80 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		05D1858D1503C47700EDBE80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05D1858C1503C47700EDBE80 /* libGVCCoreData.a */,
+				05D1859C1503C47900EDBE80 /* GVCCoreDataTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05D1858E1503C47700EDBE80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05D1858F1503C47700EDBE80 /* Foundation.framework */,
+				05D1859D1503C47900EDBE80 /* SenTestingKit.framework */,
+				05D185D31503C4DD00EDBE80 /* CoreData.framework */,
+				05D185D41503C4DD00EDBE80 /* UIKit.framework */,
+				05D1859F1503C47900EDBE80 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05D185911503C47800EDBE80 /* GVCCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				05D186B315040F5F00EDBE80 /* GVCCoreData.h */,
+				05D185E21503C6B400EDBE80 /* Additions */,
+				05D185E91503C6B400EDBE80 /* documents */,
+				05946624152BD93F004A8B1C /* Operations */,
+				0563F5591537CCFF00BC7D2D /* UI */,
+				05D185EB1503C6B400EDBE80 /* GVCDataFunctions.h */,
+				05D185EC1503C6B400EDBE80 /* GVCDataFunctions.m */,
+				05D185ED1503C6B400EDBE80 /* GVCManagedObject.h */,
+				05D185EE1503C6B400EDBE80 /* GVCManagedObject.m */,
+				05D185921503C47800EDBE80 /* Supporting Files */,
+			);
+			path = GVCCoreData;
+			sourceTree = "<group>";
+		};
+		05D185921503C47800EDBE80 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05D185931503C47800EDBE80 /* GVCCoreData-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05D185A51503C47900EDBE80 /* GVCCoreDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				05D185AB1503C47A00EDBE80 /* GVCCoreDataTests.h */,
+				05D185AC1503C47A00EDBE80 /* GVCCoreDataTests.m */,
+				05D185A61503C47900EDBE80 /* Supporting Files */,
+			);
+			path = GVCCoreDataTests;
+			sourceTree = "<group>";
+		};
+		05D185A61503C47900EDBE80 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05D185A71503C47900EDBE80 /* GVCCoreDataTests-Info.plist */,
+				05D185A81503C47900EDBE80 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05D185B71503C49A00EDBE80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05D185BF1503C49B00EDBE80 /* libGVCFoundation.a */,
+				05D185C11503C49B00EDBE80 /* GVCFoundationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05D185C31503C4A900EDBE80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05D185CC1503C4A900EDBE80 /* libGVCUIKit.a */,
+				05D185CE1503C4A900EDBE80 /* GVCUIKitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05D185D71503C56700EDBE80 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				05D185D81503C56800EDBE80 /* BuildKitHeader.sh */,
+				05D185D91503C56800EDBE80 /* GitIgnore.txt */,
+				05D185DA1503C56800EDBE80 /* GVCDebug.xcconfig */,
+				05D185DB1503C56800EDBE80 /* GVCRelease.xcconfig */,
+				051B25E71557DDAE001B4377 /* mogenerate */,
+				05D185DC1503C56800EDBE80 /* Licenses */,
+				05D185DE1503C56800EDBE80 /* Templates */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		05D185DC1503C56800EDBE80 /* Licenses */ = {
+			isa = PBXGroup;
+			children = (
+				05D185DD1503C56800EDBE80 /* GVC License.md */,
+			);
+			path = Licenses;
+			sourceTree = "<group>";
+		};
+		05D185DE1503C56800EDBE80 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				05D185DF1503C56800EDBE80 /* GVC CoreData */,
+				05D185E01503C56800EDBE80 /* README.md */,
+				05D185E11503C56800EDBE80 /* templateInstall.sh */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		05D185DF1503C56800EDBE80 /* GVC CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "GVC CoreData";
+			sourceTree = "<group>";
+		};
+		05D185E21503C6B400EDBE80 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				05946607152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.h */,
+				05946608152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.m */,
+				05946609152BD75C004A8B1C /* NSManagedObject+GVCCoreData.h */,
+				0594660A152BD75C004A8B1C /* NSManagedObject+GVCCoreData.m */,
+				0594660B152BD75C004A8B1C /* NSManagedObjectContext+GVCCoreData.h */,
+				0594660C152BD75C004A8B1C /* NSManagedObjectContext+GVCCoreData.m */,
+				051B25D51557A88B001B4377 /* NSPropertyDescription+GVCCoreData.h */,
+				051B25D61557A88B001B4377 /* NSPropertyDescription+GVCCoreData.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		05D185E91503C6B400EDBE80 /* documents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = documents;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		05D1858A1503C47700EDBE80 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D186B415040F5F00EDBE80 /* GVCCoreData.h in Headers */,
+				05D185F61503C6B400EDBE80 /* GVCDataFunctions.h in Headers */,
+				05D185F81503C6B400EDBE80 /* GVCManagedObject.h in Headers */,
+				0594660D152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.h in Headers */,
+				0594660F152BD75C004A8B1C /* NSManagedObject+GVCCoreData.h in Headers */,
+				0563F5861537D04500BC7D2D /* GVCCoreDataUIAppDelegate.h in Headers */,
+				05946611152BD75C004A8B1C /* NSManagedObjectContext+GVCCoreData.h in Headers */,
+				05946627152BD93F004A8B1C /* GVCDataOperation.h in Headers */,
+				051B25E51557CA03001B4377 /* GVCCSVDataOperation.h in Headers */,
+				051B25F71558035F001B4377 /* GVCXMLDataOperation.h in Headers */,
+				05D00F9B155BCD05009F2837 /* GVCDataListTableViewController.h in Headers */,
+				05D00F9F155BCD32009F2837 /* GVCUIViewSearchableTableController.h in Headers */,
+				051B25D71557A88B001B4377 /* NSPropertyDescription+GVCCoreData.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		05D1858B1503C47700EDBE80 /* GVCCoreData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05D185B01503C47A00EDBE80 /* Build configuration list for PBXNativeTarget "GVCCoreData" */;
+			buildPhases = (
+				05D186B215040F2B00EDBE80 /* ShellScript */,
+				05D185881503C47700EDBE80 /* Sources */,
+				05D185891503C47700EDBE80 /* Frameworks */,
+				05D1858A1503C47700EDBE80 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05D185D21503C4C100EDBE80 /* PBXTargetDependency */,
+				0563F5601537CD9B00BC7D2D /* PBXTargetDependency */,
+			);
+			name = GVCCoreData;
+			productName = GVCCoreData;
+			productReference = 05D1858C1503C47700EDBE80 /* libGVCCoreData.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		05D1859B1503C47900EDBE80 /* GVCCoreDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05D185B31503C47A00EDBE80 /* Build configuration list for PBXNativeTarget "GVCCoreDataTests" */;
+			buildPhases = (
+				05D185971503C47900EDBE80 /* Sources */,
+				05D185981503C47900EDBE80 /* Frameworks */,
+				05D185991503C47900EDBE80 /* Resources */,
+				05D1859A1503C47900EDBE80 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05D185A31503C47900EDBE80 /* PBXTargetDependency */,
+			);
+			name = GVCCoreDataTests;
+			productName = GVCCoreDataTests;
+			productReference = 05D1859C1503C47900EDBE80 /* GVCCoreDataTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05D185831503C47700EDBE80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 05D185861503C47700EDBE80 /* Build configuration list for PBXProject "GVCCoreData" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 05D185811503C47700EDBE80;
+			productRefGroup = 05D1858D1503C47700EDBE80 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 05D185B71503C49A00EDBE80 /* Products */;
+					ProjectRef = 05D185B61503C49A00EDBE80 /* GVCFoundation.xcodeproj */;
+				},
+				{
+					ProductGroup = 05D185C31503C4A900EDBE80 /* Products */;
+					ProjectRef = 05D185C21503C4A900EDBE80 /* GVCUIKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				05D1858B1503C47700EDBE80 /* GVCCoreData */,
+				05D1859B1503C47900EDBE80 /* GVCCoreDataTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		05D185BF1503C49B00EDBE80 /* libGVCFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGVCFoundation.a;
+			remoteRef = 05D185BE1503C49B00EDBE80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		05D185C11503C49B00EDBE80 /* GVCFoundationTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GVCFoundationTests.octest;
+			remoteRef = 05D185C01503C49B00EDBE80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		05D185CC1503C4A900EDBE80 /* libGVCUIKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGVCUIKit.a;
+			remoteRef = 05D185CB1503C4A900EDBE80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		05D185CE1503C4A900EDBE80 /* GVCUIKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GVCUIKitTests.octest;
+			remoteRef = 05D185CD1503C4A900EDBE80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05D185991503C47900EDBE80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D185AA1503C47900EDBE80 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05D1859A1503C47900EDBE80 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		05D186B215040F2B00EDBE80 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/Resources/BuildKitHeader.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05D185881503C47700EDBE80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D185F71503C6B400EDBE80 /* GVCDataFunctions.m in Sources */,
+				05D185F91503C6B400EDBE80 /* GVCManagedObject.m in Sources */,
+				0594660E152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.m in Sources */,
+				05946610152BD75C004A8B1C /* NSManagedObject+GVCCoreData.m in Sources */,
+				05946612152BD75C004A8B1C /* NSManagedObjectContext+GVCCoreData.m in Sources */,
+				05946628152BD93F004A8B1C /* GVCDataOperation.m in Sources */,
+				0563F5871537D04500BC7D2D /* GVCCoreDataUIAppDelegate.m in Sources */,
+				051B25D81557A88B001B4377 /* NSPropertyDescription+GVCCoreData.m in Sources */,
+				051B25E61557CA03001B4377 /* GVCCSVDataOperation.m in Sources */,
+				051B25F81558035F001B4377 /* GVCXMLDataOperation.m in Sources */,
+				05D00F9C155BCD05009F2837 /* GVCDataListTableViewController.m in Sources */,
+				05D00FA0155BCD32009F2837 /* GVCUIViewSearchableTableController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05D185971503C47900EDBE80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D185AD1503C47A00EDBE80 /* GVCCoreDataTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0563F5601537CD9B00BC7D2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GVCUIKit;
+			targetProxy = 0563F55F1537CD9B00BC7D2D /* PBXContainerItemProxy */;
+		};
+		05D185A31503C47900EDBE80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05D1858B1503C47700EDBE80 /* GVCCoreData */;
+			targetProxy = 05D185A21503C47900EDBE80 /* PBXContainerItemProxy */;
+		};
+		05D185D21503C4C100EDBE80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GVCFoundation;
+			targetProxy = 05D185D11503C4C100EDBE80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05D185A81503C47900EDBE80 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05D185A91503C47900EDBE80 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05D185AE1503C47A00EDBE80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05D185DA1503C56800EDBE80 /* GVCDebug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "${TARGET_BUILD_DIR}/usr/local/include/**";
+			};
+			name = Debug;
+		};
+		05D185AF1503C47A00EDBE80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05D185DB1503C56800EDBE80 /* GVCRelease.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "${TARGET_BUILD_DIR}/usr/local/include/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05D185B11503C47A00EDBE80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DSTROOT = /tmp/GVCCoreData.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GVCCoreData/GVCCoreData-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**",
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers/GVCFoundation\"/**",
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers/GVCUIKit\"/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "../../Headers/${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		05D185B21503C47A00EDBE80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DSTROOT = /tmp/GVCCoreData.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GVCCoreData/GVCCoreData-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**",
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers/GVCFoundation\"/**",
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers/GVCUIKit\"/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "../../Headers/${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		05D185B41503C47A00EDBE80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GVCCoreData/GVCCoreData-Prefix.pch";
+				INFOPLIST_FILE = "GVCCoreDataTests/GVCCoreDataTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		05D185B51503C47A00EDBE80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GVCCoreData/GVCCoreData-Prefix.pch";
+				INFOPLIST_FILE = "GVCCoreDataTests/GVCCoreDataTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05D185861503C47700EDBE80 /* Build configuration list for PBXProject "GVCCoreData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D185AE1503C47A00EDBE80 /* Debug */,
+				05D185AF1503C47A00EDBE80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05D185B01503C47A00EDBE80 /* Build configuration list for PBXNativeTarget "GVCCoreData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D185B11503C47A00EDBE80 /* Debug */,
+				05D185B21503C47A00EDBE80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05D185B31503C47A00EDBE80 /* Build configuration list for PBXNativeTarget "GVCCoreDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D185B41503C47A00EDBE80 /* Debug */,
+				05D185B51503C47A00EDBE80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05D185831503C47700EDBE80 /* Project object */;
+}
