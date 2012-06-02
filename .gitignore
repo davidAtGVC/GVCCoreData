@@ -1,4 +1,15 @@
+# Mac files
+.DS_Store?
+.DS_Store
+Icon?
+.DS_Store
+*.swp
+
+# Thumbnails
+._*
+
 # Xcode
+*~.nib
 build/*
 *.pbxuser
 !default.pbxuser
@@ -11,5 +22,9 @@ build/*
 *.xcworkspace
 !default.xcworkspace
 xcuserdata
+project.xcworkspace
 profile
 *.moved-aside
+
+# old skool
+.svn
