@@ -150,10 +150,10 @@
     NSArray *arrayOfOperations = nil;
     NSString *dataFile = GVC_SPRINTF(@"%@_initial_data", modelName);
     NSString *dataPath = [[NSBundle mainBundle] pathForResource:dataFile ofType:@"xml"];
-    GVCLogInfo( @"Looking for data named %@.xml", dataFile );
+    GVCLogError( @"Looking for data named %@.xml", dataFile );
     if ( [[NSFileManager defaultManager] fileExistsAtPath:dataPath] == YES )
     {
-        GVCLogInfo( @"  Found %@", dataPath );
+        GVCLogError( @"  Found %@", dataPath );
         GVCXMLDataOperation *op = [[GVCXMLDataOperation alloc] initForPersistentStoreCoordinator:[self persistentStoreCoordinator] usingFile:dataPath];
         arrayOfOperations = [NSArray arrayWithObject:op];
     }
