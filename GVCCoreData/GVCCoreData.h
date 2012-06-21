@@ -37,6 +37,8 @@
  * UI viewcontroller 
  */
 #import "GVCDataListTableViewController.h"
+#import "GVCManagedObjectEditTableViewController.h"
+#import "GVCManagedObjectTableViewController.h"
 #import "GVCUIViewSearchableTableController.h"
 
 #endif // GVCCoreData_h

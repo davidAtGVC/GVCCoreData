@@ -158,5 +158,14 @@
 	return relation;
 }
 
+- (NSArray *)gvc_allAttributes
+{
+    return [[self properties] gvc_filterArrayForClass:[NSAttributeDescription class]];
+}
+
+- (NSArray *)gvc_allRelationships
+{
+    return [[self properties] gvc_filterArrayForClass:[NSRelationshipDescription class]];    
+}
 
 @end

@@ -32,4 +32,7 @@
 - (NSAttributeDescription *)gvc_attributeNamedKeypath:(NSString *)attributePath;
 - (NSRelationshipDescription *)gvc_relationshipNamedKeypath:(NSString *)relationPath;
 
+- (NSArray *)gvc_allAttributes;
+- (NSArray *)gvc_allRelationships;
+
 @end

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05191CBB158A8F4A001F08A0 /* GVCManagedObjectEditTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05191CB9158A8F49001F08A0 /* GVCManagedObjectEditTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05191CBC158A8F4A001F08A0 /* GVCManagedObjectEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05191CBA158A8F49001F08A0 /* GVCManagedObjectEditTableViewController.m */; };
+		05191CC2158A9015001F08A0 /* GVCManagedObjectTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05191CC0158A9015001F08A0 /* GVCManagedObjectTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05191CC3158A9015001F08A0 /* GVCManagedObjectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05191CC1158A9015001F08A0 /* GVCManagedObjectTableViewController.m */; };
 		051B25D71557A88B001B4377 /* NSPropertyDescription+GVCCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 051B25D51557A88B001B4377 /* NSPropertyDescription+GVCCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		051B25D81557A88B001B4377 /* NSPropertyDescription+GVCCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 051B25D61557A88B001B4377 /* NSPropertyDescription+GVCCoreData.m */; };
 		051B25E51557CA03001B4377 /* GVCCSVDataOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 051B25E31557CA03001B4377 /* GVCCSVDataOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -96,6 +100,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05191CB9158A8F49001F08A0 /* GVCManagedObjectEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCManagedObjectEditTableViewController.h; sourceTree = "<group>"; };
+		05191CBA158A8F49001F08A0 /* GVCManagedObjectEditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCManagedObjectEditTableViewController.m; sourceTree = "<group>"; };
+		05191CC0158A9015001F08A0 /* GVCManagedObjectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCManagedObjectTableViewController.h; sourceTree = "<group>"; };
+		05191CC1158A9015001F08A0 /* GVCManagedObjectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCManagedObjectTableViewController.m; sourceTree = "<group>"; };
 		051B25D51557A88B001B4377 /* NSPropertyDescription+GVCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPropertyDescription+GVCCoreData.h"; sourceTree = "<group>"; };
 		051B25D61557A88B001B4377 /* NSPropertyDescription+GVCCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPropertyDescription+GVCCoreData.m"; sourceTree = "<group>"; };
 		051B25E31557CA03001B4377 /* GVCCSVDataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCCSVDataOperation.h; sourceTree = "<group>"; };
@@ -214,6 +222,10 @@
 				05D00F9A155BCD05009F2837 /* GVCDataListTableViewController.m */,
 				05D00F9D155BCD32009F2837 /* GVCUIViewSearchableTableController.h */,
 				05D00F9E155BCD32009F2837 /* GVCUIViewSearchableTableController.m */,
+				05191CC0158A9015001F08A0 /* GVCManagedObjectTableViewController.h */,
+				05191CC1158A9015001F08A0 /* GVCManagedObjectTableViewController.m */,
+				05191CB9158A8F49001F08A0 /* GVCManagedObjectEditTableViewController.h */,
+				05191CBA158A8F49001F08A0 /* GVCManagedObjectEditTableViewController.m */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -395,6 +407,8 @@
 				05D00F9B155BCD05009F2837 /* GVCDataListTableViewController.h in Headers */,
 				05D00F9F155BCD32009F2837 /* GVCUIViewSearchableTableController.h in Headers */,
 				051B25D71557A88B001B4377 /* NSPropertyDescription+GVCCoreData.h in Headers */,
+				05191CBB158A8F4A001F08A0 /* GVCManagedObjectEditTableViewController.h in Headers */,
+				05191CC2158A9015001F08A0 /* GVCManagedObjectTableViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +578,8 @@
 				051B25F81558035F001B4377 /* GVCXMLDataOperation.m in Sources */,
 				05D00F9C155BCD05009F2837 /* GVCDataListTableViewController.m in Sources */,
 				05D00FA0155BCD32009F2837 /* GVCUIViewSearchableTableController.m in Sources */,
+				05191CBC158A8F4A001F08A0 /* GVCManagedObjectEditTableViewController.m in Sources */,
+				05191CC3158A9015001F08A0 /* GVCManagedObjectTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
