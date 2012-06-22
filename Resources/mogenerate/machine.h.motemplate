@@ -30,7 +30,7 @@ GVC_DEFINE_EXTERN_STR(<$managedObjectClassName$>_Relationship_<$Relationship.nam
 
 <$foreach Attribute noninheritedAttributes do$>
 <$if Attribute.hasDefinedAttributeType$>
-@property (nonatomic, retain) <$Attribute.objectAttributeType$> <$Attribute.name$>;
+@property (nonatomic, strong) <$Attribute.objectAttributeType$> <$Attribute.name$>;
 <$if Attribute.hasScalarAttributeType$>
 @property <$Attribute.scalarAttributeType$> <$Attribute.name$>Value;
 - (<$Attribute.scalarAttributeType$>)<$Attribute.name$>Value;
@@ -41,10 +41,10 @@ GVC_DEFINE_EXTERN_STR(<$managedObjectClassName$>_Relationship_<$Relationship.nam
 <$endforeach do$>
 <$foreach Relationship noninheritedRelationships do$>
 <$if Relationship.isToMany$>
-@property (nonatomic, retain) NSSet* <$Relationship.name$>;
+@property (nonatomic, strong) NSSet* <$Relationship.name$>;
 - (NSMutableSet*)<$Relationship.name$>Set;
 <$else$>
-@property (nonatomic, retain) <$Relationship.destinationEntity.managedObjectClassName$>* <$Relationship.name$>;
+@property (nonatomic, strong) <$Relationship.destinationEntity.managedObjectClassName$>* <$Relationship.name$>;
 //- (BOOL)validate<$Relationship.name.initialCapitalString$>:(id*)value_ error:(NSError**)error_;
 <$endif$>
 <$endforeach do$>

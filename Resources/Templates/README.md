@@ -1,6 +1,6 @@
 About
 -----
-Some simple templates to support common patters in the GVCOpenKits.
+Some simple templates to support common patters in the GVC Opensource frameworks
 
 Install
 -------

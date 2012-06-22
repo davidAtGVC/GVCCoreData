@@ -14,9 +14,9 @@
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
-@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (assign, nonatomic) BOOL searchIsActive;
-@property (nonatomic, retain) NSArray *filteredListContent;
+@property (strong, nonatomic) NSArray *filteredListContent;
 
 - (NSManagedObjectContext *)managedObjectContext;
 

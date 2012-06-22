@@ -36,7 +36,7 @@ GVC_DEFINE_STRVALUE(<$managedObjectClassName$>_Relationship_<$Relationship.name$
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 	<$foreach Attribute noninheritedAttributes do$><$if Attribute.hasDefinedAttributeType$><$if Attribute.hasScalarAttributeType$>
 	if ([key isEqualToString:@"<$Attribute.name$>Value"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"<$Attribute.name$>"];
+		NSSet *affectingKey = [NSSet setWithObject:<$managedObjectClassName$>_Attribute_<$Attribute.name$>];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 	}<$endif$><$endif$><$endforeach do$>
 
@@ -76,9 +76,9 @@ GVC_DEFINE_STRVALUE(<$managedObjectClassName$>_Relationship_<$Relationship.name$
 
 	<$if Relationship.isToMany$>
 - (NSMutableSet*)<$Relationship.name$>Set {
-	[self willAccessValueForKey:@"<$Relationship.name$>"];
-	NSMutableSet *result = [self mutableSetValueForKey:@"<$Relationship.name$>"];
-	[self didAccessValueForKey:@"<$Relationship.name$>"];
+	[self willAccessValueForKey:<$managedObjectClassName$>_Relationship_<$Relationship.name$>];
+	NSMutableSet *result = [self mutableSetValueForKey:<$managedObjectClassName$>_Relationship_<$Relationship.name$>];
+	[self didAccessValueForKey:<$managedObjectClassName$>_Relationship_<$Relationship.name$>];
 	return result;
 }
 	<$endif$>
