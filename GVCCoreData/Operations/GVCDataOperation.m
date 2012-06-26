@@ -39,7 +39,7 @@
 	[self setManagedObjectContext:[[NSManagedObjectContext alloc] init]];
 	[[self managedObjectContext] setPersistentStoreCoordinator:[self persistentStoreCoordinator]];
 	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contextDidSave:) name:NSManagedObjectContextDidSaveNotification object:managedObjectContext];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contextDidSave:) name:NSManagedObjectContextDidSaveNotification object:[self managedObjectContext]];
 }
 
 - (void)saveContext
