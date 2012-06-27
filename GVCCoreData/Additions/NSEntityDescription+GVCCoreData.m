@@ -8,7 +8,7 @@
 #import "NSEntityDescription+GVCCoreData.h"
 #import "NSManagedObject+GVCCoreData.h"
 #import "GVCManagedObject.h"
-
+#import "NSPropertyDescription+GVCCoreData.h"
 /**
  * $Date: 2009-01-20 16:28:51 -0500 (Tue, 20 Jan 2009) $
  * $Rev: 121 $
@@ -26,6 +26,12 @@
         localizedName = GVC_LocalizedString(key, [self name]);
     }
     return (localizedName ? localizedName : [self name]);
+}
+
+- (NSString *)gvc_localizedNameForProperty:(NSString *)propname
+{
+    NSPropertyDescription *prop = [[self propertiesByName] objectForKey:propname];
+    return (prop == nil ? nil : [prop gvc_localizedName]);
 }
 
 - (NSString *)gvc_localizedErrorString:(NSString *)errorMessage

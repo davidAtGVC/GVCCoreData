@@ -18,6 +18,7 @@
 @interface NSEntityDescription (GVCCoreData)
 
 - (NSString *)gvc_localizedName;
+- (NSString *)gvc_localizedNameForProperty:(NSString *)propname;
 
 - (NSString *)gvc_localizedErrorString:(NSString *)errorMessage;
 
