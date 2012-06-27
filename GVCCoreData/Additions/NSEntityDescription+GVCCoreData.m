@@ -160,12 +160,12 @@
 
 - (NSArray *)gvc_allAttributes
 {
-    return [[self properties] gvc_filterArrayForClass:[NSAttributeDescription class]];
+    return [[self properties] gvc_filterForClass:[NSAttributeDescription class]];
 }
 
 - (NSArray *)gvc_allRelationships
 {
-    return [[self properties] gvc_filterArrayForClass:[NSRelationshipDescription class]];    
+    return [[self properties] gvc_filterForClass:[NSRelationshipDescription class]];    
 }
 
 @end

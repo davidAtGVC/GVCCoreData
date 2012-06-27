@@ -69,7 +69,8 @@
             // maybe each model should have a version and a ModelUpgrade class
             // example [BucketsModel upgradeDatabase:moc];
             // [self upgradeDatabase];
-            [moContext setUndoManager:[[NSUndoManager  alloc] init]];
+            // [moContext setUndoManager:[[NSUndoManager  alloc] init]];
+            [moContext setUndoManager:nil];
             
             // set the stack
             [self setManagedObjectModel:superModel];

@@ -301,4 +301,9 @@
 {
 	[relationships addObject:node];
 }
+
+- (NSString *)description
+{
+    return GVC_SPRINTF(@"%@ name='%@'", [super description], [self name]);
+}
 @end
