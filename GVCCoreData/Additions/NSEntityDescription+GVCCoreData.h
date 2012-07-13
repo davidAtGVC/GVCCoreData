@@ -30,6 +30,7 @@
 - (NSAttributeDescription *)gvc_attributeNamed:(NSString *)attributeName;
 - (NSRelationshipDescription *)gvc_relationshipNamed:(NSString *)attributeName;
 
+- (NSPropertyDescription *)gvc_propertyNamedKeypath:(NSString *)attributePath;
 - (NSAttributeDescription *)gvc_attributeNamedKeypath:(NSString *)attributePath;
 - (NSRelationshipDescription *)gvc_relationshipNamedKeypath:(NSString *)relationPath;
 

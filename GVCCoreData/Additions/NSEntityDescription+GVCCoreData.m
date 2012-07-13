@@ -126,42 +126,42 @@
 	return (NSRelationshipDescription *)prop;
 }
 
-- (NSAttributeDescription *)gvc_attributeNamedKeypath:(NSString *)attributePath
+/* this keypath usually ends in an Attribute, but it can be a relationship
+ */
+- (NSPropertyDescription *)gvc_propertyNamedKeypath:(NSString *)attributePath
 {
-	NSAttributeDescription *attribute = nil;
+	NSPropertyDescription *property = nil;
 	NSEntityDescription *current = self;
 	NSArray *path = [attributePath componentsSeparatedByString:@"."];
 	for ( NSString *step in path )
 	{
-		GVC_ASSERT( attribute == nil, @"Attribute is not nil" );
-		NSRelationshipDescription *relation = [current gvc_relationshipNamed:step];
-		if ( relation != nil )
-		{
-			current = [relation destinationEntity];
-		}
-		else
-		{
-			attribute = [current gvc_attributeNamed:step];
-		}
-		
+        if ( [path indexOfObject:step] == ([path count] - 1) )
+        {
+            // last step, preperty is whatever this points to
+            property = [current gvc_propertyNamed:step];
+        }
+        else
+        {
+            // not the last step, so it MUST be a relationship
+            NSRelationshipDescription *relation = [current gvc_relationshipNamed:step];
+            GVC_ASSERT_NOT_NIL(relation);
+            
+            current = [relation destinationEntity];
+        }
 	}
-	return attribute;
+	return property;
+}
+
+- (NSAttributeDescription *)gvc_attributeNamedKeypath:(NSString *)attributePath
+{
+    NSPropertyDescription *property = [self gvc_propertyNamedKeypath:attributePath];
+	return (NSAttributeDescription *)(([property isKindOfClass:[NSAttributeDescription class]] == YES) ? property : nil );
 }
 
 - (NSRelationshipDescription *)gvc_relationshipNamedKeypath:(NSString *)relationPath
 {
-	NSRelationshipDescription *relation = nil;
-	NSEntityDescription *current = self;
-	NSArray *path = [relationPath componentsSeparatedByString:@"."];
-	for ( NSString *step in path )
-	{
-		relation = [current gvc_relationshipNamed:step];
-		if ( relation != nil )
-		{
-			current = [relation destinationEntity];
-		}
-	}
-	return relation;
+    NSPropertyDescription *property = [self gvc_propertyNamedKeypath:relationPath];
+	return (NSRelationshipDescription *)(([property isKindOfClass:[NSRelationshipDescription class]] == YES) ? property : nil );
 }
 
 - (NSArray *)gvc_allAttributes
