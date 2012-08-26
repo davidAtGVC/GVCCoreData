@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		0597E79A15EAB6A5005CC64F /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0597E79B15EAB6A5005CC64F /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				0597E79E15EAB6AA005CC64F /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		05191CBB158A8F4A001F08A0 /* GVCManagedObjectEditTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05191CB9158A8F49001F08A0 /* GVCManagedObjectEditTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05191CBC158A8F4A001F08A0 /* GVCManagedObjectEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05191CBA158A8F49001F08A0 /* GVCManagedObjectEditTableViewController.m */; };
@@ -154,6 +168,8 @@
 		05D185ED1503C6B400EDBE80 /* GVCManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCManagedObject.h; sourceTree = "<group>"; };
 		05D185EE1503C6B400EDBE80 /* GVCManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCManagedObject.m; sourceTree = "<group>"; };
 		05D186B315040F5F00EDBE80 /* GVCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCCoreData.h; sourceTree = "<group>"; };
+		05F94D2315EAB5B50066BF2E /* BuildDoxygen.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = BuildDoxygen.sh; sourceTree = "<group>"; };
+		05F94D2415EAB5B50066BF2E /* doxygen.config */ = {isa = PBXFileReference; lastKnownFileType = text; path = doxygen.config; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,9 +253,9 @@
 				05D185C21503C4A900EDBE80 /* GVCUIKit.xcodeproj */,
 				05D185911503C47800EDBE80 /* GVCCoreData */,
 				05D185A51503C47900EDBE80 /* GVCCoreDataTests */,
+				05D185D71503C56700EDBE80 /* Resources */,
 				05D1858E1503C47700EDBE80 /* Frameworks */,
 				05D1858D1503C47700EDBE80 /* Products */,
-				05D185D71503C56700EDBE80 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -331,6 +347,8 @@
 			children = (
 				05D185D81503C56800EDBE80 /* BuildKitHeader.sh */,
 				05D185D91503C56800EDBE80 /* GitIgnore.txt */,
+				05F94D2315EAB5B50066BF2E /* BuildDoxygen.sh */,
+				05F94D2415EAB5B50066BF2E /* doxygen.config */,
 				05D185DA1503C56800EDBE80 /* GVCDebug.xcconfig */,
 				05D185DB1503C56800EDBE80 /* GVCRelease.xcconfig */,
 				051B25E71557DDAE001B4377 /* mogenerate */,
@@ -486,6 +504,7 @@
 			targets = (
 				05D1858B1503C47700EDBE80 /* GVCCoreData */,
 				05D1859B1503C47900EDBE80 /* GVCCoreDataTests */,
+				0597E79A15EAB6A5005CC64F /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -533,6 +552,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0597E79E15EAB6AA005CC64F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/Resources/BuildDoxygen.sh";
+			showEnvVarsInLog = 0;
+		};
 		05D1859A1503C47900EDBE80 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -623,6 +656,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0597E79C15EAB6A5005CC64F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0597E79D15EAB6A5005CC64F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		05D185AE1503C47A00EDBE80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 05D185DA1503C56800EDBE80 /* GVCDebug.xcconfig */;
@@ -742,6 +789,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0597E79B15EAB6A5005CC64F /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0597E79C15EAB6A5005CC64F /* Debug */,
+				0597E79D15EAB6A5005CC64F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		05D185861503C47700EDBE80 /* Build configuration list for PBXProject "GVCCoreData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

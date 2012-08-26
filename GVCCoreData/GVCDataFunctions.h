@@ -21,33 +21,35 @@
 GVC_EXTERN NSString *gvc_DefaultValueForProperty(NSPropertyDescription *property, NSString *contextOfUse);
 
 /** this function returns a localized label for the specified property using the namespacing key following the following format
- <modelname>_<entityname>_<propertyname>_<context>
- and example might be
- Accounting_Transaction_name_placeholder
-*/
+ * <pre>&lt;entityname&gt;_&lt;propertyname&gt;_&lt;context&gt;</pre>
+ * and example might be
+ * <pre>Transaction_name_placeholder</pre>
+ */
 GVC_EXTERN NSString *gvc_LocalizedPropertyLabelWithDefault(NSPropertyDescription *attribute, NSString *contextOfUse, NSString *defaultValue);
 
-/*
- The localized value will default to '<entityname> <propertyname> <context> for attributes an example
- Accounting_Transaction_name_placeholder = "Transaction Name Placeholder";
- 
- for relationships '<destination entityname> <context>'
- Accounting_Account_transactions_label = "Transaction Label";
- Accounting_Account_transactions_add = "Transaction Add";
- 
+/**
+ /** this function returns a localized label for the specified property using the namespacing key following the following format
+ * <pre>&lt;entityname&gt;_&lt;propertyname&gt;_&lt;context&gt;</pre>
+ * and example might be
+ * <pre>Transaction_name_placeholder</pre>
+ * The localized value will default to <pre>&lt;entityname&gt; &lt;propertyname&gt; &lt;context&gt;</pre> for attributes an example
+ * <pre>Transaction_name_placeholder = "Transaction Name Placeholder";</pre>
+ * for relationships <pre>'&lt;destination entityname&gt; &lt;context&gt;'</pre>
+ * <pre>Account_transactions_label = "Transaction Label";</pre>
+ * <pre>Account_transactions_add = "Transaction Add";</pre>
  */
 GVC_EXTERN NSString *gvc_LocalizedPropertyLabelForContext(NSPropertyDescription *attribute, NSString *contextOfUse);
 
-/* convenience function that set the context to "label" */
+/** convenience function that set the context to "label" */
 GVC_EXTERN NSString *gvc_LocalizedAttributeLabel(NSAttributeDescription *attribute);
 
-/* convenience function that set the context to "placeholder" */
+/** convenience function that set the context to "placeholder" */
 GVC_EXTERN NSString *gvc_LocalizedAttributePlaceholder(NSAttributeDescription *attribute);
 
-/* convenience function that set the context to "label" */
+/** convenience function that set the context to "label" */
 GVC_EXTERN NSString *gvc_LocalizedRelationshipLabel(NSRelationshipDescription *relationship);
 
-/* convenience function that set the context to "add" */
+/** convenience function that set the context to "add" */
 GVC_EXTERN NSString *gvc_LocalizedRelationshipAddLabel(NSRelationshipDescription *relationship);
 
 #endif
