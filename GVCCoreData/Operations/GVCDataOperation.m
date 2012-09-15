@@ -58,9 +58,9 @@
 	return managedObjectContext;
 }
 
-- (GVC_Operation_Type)operationType
+- (GVCOperation_Type)operationType
 {
-	return GVC_Operation_Type_CORE_DATA;
+	return GVCOperation_Type_CORE_DATA;
 }
 
 - (void)contextDidSave:(NSNotification*)notification 

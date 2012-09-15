@@ -27,7 +27,6 @@ GVC_EXTERN NSString *gvc_DefaultValueForProperty(NSPropertyDescription *property
  */
 GVC_EXTERN NSString *gvc_LocalizedPropertyLabelWithDefault(NSPropertyDescription *attribute, NSString *contextOfUse, NSString *defaultValue);
 
-/**
  /** this function returns a localized label for the specified property using the namespacing key following the following format
  * <pre>&lt;entityname&gt;_&lt;propertyname&gt;_&lt;context&gt;</pre>
  * and example might be

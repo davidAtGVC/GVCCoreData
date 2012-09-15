@@ -138,6 +138,7 @@
 		0594660C152BD75C004A8B1C /* NSManagedObjectContext+GVCCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+GVCCoreData.m"; sourceTree = "<group>"; };
 		05946625152BD93F004A8B1C /* GVCDataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCDataOperation.h; sourceTree = "<group>"; };
 		05946626152BD93F004A8B1C /* GVCDataOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCDataOperation.m; sourceTree = "<group>"; };
+		059939E8160542750020BDD9 /* BuildDocs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = BuildDocs.sh; sourceTree = "<group>"; };
 		05D00F99155BCD05009F2837 /* GVCDataListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCDataListTableViewController.h; sourceTree = "<group>"; };
 		05D00F9A155BCD05009F2837 /* GVCDataListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCDataListTableViewController.m; sourceTree = "<group>"; };
 		05D00F9D155BCD32009F2837 /* GVCUIViewSearchableTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCUIViewSearchableTableController.h; sourceTree = "<group>"; };
@@ -346,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				05D185D81503C56800EDBE80 /* BuildKitHeader.sh */,
+				059939E8160542750020BDD9 /* BuildDocs.sh */,
 				05D185D91503C56800EDBE80 /* GitIgnore.txt */,
 				05F94D2315EAB5B50066BF2E /* BuildDoxygen.sh */,
 				05F94D2415EAB5B50066BF2E /* doxygen.config */,
@@ -478,7 +480,7 @@
 		05D185831503C47700EDBE80 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 			};
 			buildConfigurationList = 05D185861503C47700EDBE80 /* Build configuration list for PBXProject "GVCCoreData" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -563,7 +565,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PROJECT_DIR}/Resources/BuildDoxygen.sh";
+			shellScript = "# build documents using Doxygen\n# ${PROJECT_DIR}/Resources/BuildDoxygen.sh\n\n# build documents using appledocs\n${PROJECT_DIR}/Resources/BuildDocs.sh";
 			showEnvVarsInLog = 0;
 		};
 		05D1859A1503C47900EDBE80 /* ShellScript */ = {
