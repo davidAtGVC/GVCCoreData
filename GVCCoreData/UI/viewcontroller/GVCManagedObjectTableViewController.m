@@ -84,7 +84,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section 
 {
     GVCManagedObjectTableViewSection *moSection = nil;
-    if ( [[self displayModel] count] > section )
+    if ( (NSInteger)[[self displayModel] count] > section )
     {
         moSection = [[self displayModel] objectAtIndex:section];
     }
@@ -149,3 +149,4 @@
 }
 
 @end
+

@@ -1,6 +1,5 @@
 /**
  * Header for GVCCoreData
- * Author: daspinall
  */
 
 #ifndef GVCCoreData_h

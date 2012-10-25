@@ -86,7 +86,7 @@
 	NSArray *def = [NSArray arrayWithObjects:GVCManagedObject_SORT_ORDER_ATTRIBUTE, GVCManagedObject_NAME_ATTRIBUTE, GVCManagedObject_SYNC_ID_ATTRIBUTE, [all objectAtIndex:0], nil];
 	
 	NSSortDescriptor *sort = nil;
-	for ( int i = 0; (i < [def count]) && (sort == nil); i++ )
+	for ( NSUInteger i = 0; (i < [def count]) && (sort == nil); i++ )
 	{
 		NSString *attName = [def objectAtIndex:i];
 		if ( [all indexOfObject:attName] != NSNotFound )

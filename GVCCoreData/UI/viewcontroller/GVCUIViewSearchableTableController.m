@@ -139,7 +139,7 @@
 {
 	NSArray *list = [[self fetchedResultsController] sections];
 	NSInteger rowCount = 0;
-	if ( section < [list count] )
+	if ( section < (NSInteger)[list count] )
 	{
 		id <NSFetchedResultsSectionInfo> sectionInfo = [list objectAtIndex:section];
 		rowCount = [sectionInfo numberOfObjects];
@@ -151,7 +151,7 @@
 {
 	NSArray *list = [[self fetchedResultsController] sections];
 	NSString *secName = nil;
-	if ( section < [list count] )
+	if ( section < (NSInteger)[list count] )
 	{
 		id <NSFetchedResultsSectionInfo> sectionInfo = [list objectAtIndex:section];
 		secName = [sectionInfo name];
@@ -274,7 +274,7 @@
 		GVCLogError(@"Unresolved error %@, %@", error, [error userInfo]);
 		exit(-1);
 	}           
-	[self.tableView reloadData];
+	[[self tableView] reloadData];
 }
 
 
