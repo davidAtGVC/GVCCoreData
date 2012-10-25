@@ -88,7 +88,7 @@
 	[digest addRule:[GVCXMLDigesterRule ruleForSetPropertyText:@"text"] forNodeName:@"predicate"];
 	[digest addRule:[GVCXMLDigesterRule ruleForAttributeMapKeysAndValues:@"type", @"type", @"attribute", @"targetAttributeName", nil] forNodeName:@"predicate"];
 	
-	[digest setFilename:[self loadFile]];
+	[digest setXmlFilename:[self loadFile]];
 	[digest parse];
 	
 	NSObject *digestResults = [digest digestValueForPath:@"data/entity"];
