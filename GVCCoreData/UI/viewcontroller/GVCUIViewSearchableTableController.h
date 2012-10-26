@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "GVCUIKit.h"
+#import <GVCUIKit/GVCUIKit.h>
 
 @interface GVCUIViewSearchableTableController : GVCUIViewWithTableController <NSFetchedResultsControllerDelegate, UISearchDisplayDelegate, UISearchBarDelegate>
 

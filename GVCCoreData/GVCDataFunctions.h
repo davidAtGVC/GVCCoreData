@@ -16,7 +16,7 @@
 #import <Foundation/NSDictionary.h>
 #import <CoreData/CoreData.h>
 
-#import "GVCFoundation.h"
+#import <GVCFoundation/GVCFoundation.h>
 
 GVC_EXTERN NSString *gvc_DefaultValueForProperty(NSPropertyDescription *property, NSString *contextOfUse);
 

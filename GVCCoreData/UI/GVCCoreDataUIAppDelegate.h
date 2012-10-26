@@ -6,7 +6,7 @@
  *
  */
 
-#import "GVCUIKit.h"
+#import <GVCUIKit/GVCUIKit.h>
 #import "GVCDataOperation.h"
 
 @interface GVCCoreDataUIAppDelegate : GVCUIApplicationDelegate

@@ -8,8 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-#import "GVCUIKit.h"
-#import "GVCUITableViewController.h"
+#import <GVCUIKit/GVCUIKit.h>
 
 @class GVCManagedObjectTableViewSection;
 

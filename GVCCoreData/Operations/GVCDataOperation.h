@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "GVCFoundation.h"
+#import <GVCFoundation/GVCFoundation.h>
 
 
 typedef void (^GVCDataSavedOperationBlock)(GVCOperation *operation, NSNotification *notification);

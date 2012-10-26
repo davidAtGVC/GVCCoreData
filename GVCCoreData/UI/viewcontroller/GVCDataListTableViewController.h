@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "GVCUIKit.h"
+#import <GVCUIKit/GVCUIKit.h>
 
 @interface GVCDataListTableViewController : GVCUITableViewController <NSFetchedResultsControllerDelegate>
 

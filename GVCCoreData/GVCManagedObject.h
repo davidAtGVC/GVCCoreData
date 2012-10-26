@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "GVCFoundation.h"
+#import <GVCFoundation/GVCFoundation.h>
 
 GVC_DEFINE_EXTERN_STR(GVCManagedObject_SYNC_ID_ATTRIBUTE);
 GVC_DEFINE_EXTERN_STR(GVCManagedObject_SYNC_SRC_ATTRIBUTE);
