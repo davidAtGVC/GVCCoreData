@@ -7,7 +7,7 @@
  */
 
 #import "GVCCoreDataUIAppDelegate.h"
-#import "GVCFoundation.h"
+#import <GVCFoundation/GVCFoundation.h>
 #import "GVCXMLDataOperation.h"
 
 @interface GVCCoreDataUIAppDelegate ()

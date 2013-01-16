@@ -9,7 +9,7 @@
 #import "GVCManagedObjectTableViewController.h"
 #import "NSEntityDescription+GVCCoreData.h"
 
-#import "GVCFoundation.h"
+#import <GVCFoundation/GVCFoundation.h>
 
 @interface GVCManagedObjectTableViewController ()
 @property (strong, nonatomic) NSMutableArray *displayModel;

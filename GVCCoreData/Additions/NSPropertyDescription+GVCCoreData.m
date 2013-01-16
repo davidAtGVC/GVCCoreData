@@ -7,7 +7,7 @@
  */
 
 #import "NSPropertyDescription+GVCCoreData.h"
-#import "GVCFoundation.h"
+#import <GVCFoundation/GVCFoundation.h>
 
 @implementation NSPropertyDescription (GVCCoreData)
 

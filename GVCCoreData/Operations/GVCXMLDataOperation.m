@@ -7,8 +7,8 @@
  */
 
 #import "GVCXMLDataOperation.h"
-#import "GVCFoundation.h"
-#import "GVCCoreData.h"
+#import <GVCFoundation/GVCFoundation.h>
+#import <GVCCoreData/GVCCoreData.h>
 
 @interface GVCDataLoadXMLNode : NSObject
 @property (strong, nonatomic) NSString *name;

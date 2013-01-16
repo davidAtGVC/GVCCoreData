@@ -8,7 +8,7 @@
 #import "NSManagedObject+GVCCoreData.h"
 #import "NSEntityDescription+GVCCoreData.h"
 
-#import "GVCFoundation.h"
+#import <GVCFoundation/GVCFoundation.h>
 #import "GVCManagedObject.h"
 
 /**

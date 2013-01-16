@@ -6,8 +6,8 @@
 //
 
 #import "GVCDataListTableViewController.h"
-#import "GVCFoundation.h"
-#import "GVCCoreData.h"
+#import <GVCFoundation/GVCFoundation.h>
+#import <GVCCoreData/GVCCoreData.h>
 
 @implementation GVCDataListTableViewController
 

@@ -2,7 +2,7 @@
 // Make changes to <$managedObjectClassName$>.h instead.
 
 #import <CoreData/CoreData.h>
-#import "GVCFoundation.h"
+#import <GVCFoundation/GVCFoundation.h>
 
 <$if hasCustomSuperentity$>#import "<$customSuperentity$>.h"<$endif$>
 

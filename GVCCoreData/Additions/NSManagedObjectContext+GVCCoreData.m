@@ -6,8 +6,7 @@
 //
 
 #import "NSManagedObjectContext+GVCCoreData.h"
-#import "GVCFoundation.h"
-
+#import <GVCFoundation/GVCFoundation.h>
 
 @implementation NSManagedObjectContext(GVCCoreData)
 
