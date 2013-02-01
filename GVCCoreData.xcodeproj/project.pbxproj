@@ -672,6 +672,70 @@
 			};
 			name = Release;
 		};
+		05BC74CB16B33C4900B186A9 /* Squish */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05D185DA1503C56800EDBE80 /* GVCDebug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Squish;
+		};
+		05BC74CC16B33C4900B186A9 /* Squish */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DSTROOT = /tmp/GVCCoreData.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GVCCoreData/GVCCoreData-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/Headers\"/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "Headers/${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Squish;
+		};
+		05BC74CD16B33C4900B186A9 /* Squish */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GVCCoreData/GVCCoreData-Prefix.pch";
+				INFOPLIST_FILE = "GVCCoreDataTests/GVCCoreDataTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Squish;
+		};
+		05BC74CE16B33C4900B186A9 /* Squish */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Squish;
+		};
 		05D185AE1503C47A00EDBE80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 05D185DA1503C56800EDBE80 /* GVCDebug.xcconfig */;
@@ -694,7 +758,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "${TARGET_BUILD_DIR}/usr/local/include/**";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -713,7 +777,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "${TARGET_BUILD_DIR}/usr/local/include/**";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -725,14 +789,10 @@
 				DSTROOT = /tmp/GVCCoreData.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GVCCoreData/GVCCoreData-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**",
-					"\"$(BUILT_PRODUCTS_DIR)/../../Headers/GVCFoundation\"/**",
-					"\"$(BUILT_PRODUCTS_DIR)/../../Headers/GVCUIKit\"/**",
-				);
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/Headers\"/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "../../Headers/${TARGET_NAME}";
+				PUBLIC_HEADERS_FOLDER_PATH = "Headers/${TARGET_NAME}";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -745,14 +805,10 @@
 				DSTROOT = /tmp/GVCCoreData.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GVCCoreData/GVCCoreData-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**",
-					"\"$(BUILT_PRODUCTS_DIR)/../../Headers/GVCFoundation\"/**",
-					"\"$(BUILT_PRODUCTS_DIR)/../../Headers/GVCUIKit\"/**",
-				);
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/Headers\"/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "../../Headers/${TARGET_NAME}";
+				PUBLIC_HEADERS_FOLDER_PATH = "Headers/${TARGET_NAME}";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -795,6 +851,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0597E79C15EAB6A5005CC64F /* Debug */,
+				05BC74CE16B33C4900B186A9 /* Squish */,
 				0597E79D15EAB6A5005CC64F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -804,6 +861,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05D185AE1503C47A00EDBE80 /* Debug */,
+				05BC74CB16B33C4900B186A9 /* Squish */,
 				05D185AF1503C47A00EDBE80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -813,6 +871,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05D185B11503C47A00EDBE80 /* Debug */,
+				05BC74CC16B33C4900B186A9 /* Squish */,
 				05D185B21503C47A00EDBE80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -822,6 +881,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05D185B41503C47A00EDBE80 /* Debug */,
+				05BC74CD16B33C4900B186A9 /* Squish */,
 				05D185B51503C47A00EDBE80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
