@@ -22,8 +22,14 @@
 - (void)viewDidLoad 
 {
     [super viewDidLoad];    
+ 
+    UISearchBar *strongSearchBar = [self searchBar];
     
-	[[self searchBar] setShowsCancelButton:YES];  
+    if (strongSearchBar != nil)
+    {
+        [strongSearchBar setShowsCancelButton:YES];
+        [self setSearchBar:strongSearchBar];
+    }
 }
 
 - (NSEntityDescription *)rootEntity
@@ -296,13 +302,15 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
+    UISearchBar *strongSearchBar = [self searchBar];
+    
     [NSFetchedResultsController deleteCacheWithName:GVC_CLASSNAME(self)];
 	if (gvc_IsEmpty(searchString) == NO )
 	{
-        if ( gvc_IsEmpty([[self searchBar] scopeButtonTitles]) == NO)
+        if ( gvc_IsEmpty([strongSearchBar scopeButtonTitles]) == NO)
         {
             // simple case, use the scope keys to create a predicate
-            NSString *scopeKp = [[self scopeKeys] objectAtIndex:[[self searchBar] selectedScopeButtonIndex]];
+            NSString *scopeKp = [[self scopeKeys] objectAtIndex:[strongSearchBar selectedScopeButtonIndex]];
 
             [[[self fetchedResultsController] fetchRequest] setPredicate:[NSPredicate predicateWithFormat:@"%K contains[cd] %@", scopeKp, searchString]];
         }
@@ -338,7 +346,9 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
 {
-    return [self searchDisplayController:controller shouldReloadTableForSearchString:[[self searchBar] text]];
+    UISearchBar *strongSearchBar = [self searchBar];
+
+    return [self searchDisplayController:controller shouldReloadTableForSearchString:[strongSearchBar text]];
 }
 
 - (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller 
