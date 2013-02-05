@@ -55,7 +55,7 @@ CLANG_ANALYZER_DEADCODE_DEADSTORES = YES
 CLANG_ANALYZER_DEADCODE_IDEMPOTENT_OPERATIONS = YES
 CLANG_ANALYZER_OBJC_SELF_INIT = YES
 
-HEADER_SEARCH_PATHS = $(inherited) "$(OBJROOT)/UninstalledProducts/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "$(BUILT_PRODUCTS_DIR)/Headers" "$(OBJROOT)/UninstalledProducts/Headers"
 
 WARNING_CFLAGS = -Wall -Wreceiver-is-weak $(inherited)
 
