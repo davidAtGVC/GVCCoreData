@@ -44,7 +44,7 @@
 	return nil;
 }
 
-- (NSString *)viewTitleKey
+- (NSString *)viewTitle
 {
 	return [self rootEntityName];
 }
