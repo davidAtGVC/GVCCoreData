@@ -20,11 +20,13 @@
 
 - (void)gvc_setConvertedValue:(id)value forKey:(NSString *)key
 {
-	GVC_ASSERT( [self entity] != nil, @"No Entity" );
-	GVC_ASSERT( [self managedObjectContext] != nil, @"No MOC" );
-		
-	NSAttributeDescription *attrDesc = [[self entity] gvc_attributeNamed:key];
+	GVC_DBC_REQUIRE(
+					GVC_DBC_FACT_NOT_NIL([self entity]);
+					GVC_DBC_FACT_NOT_NIL([self managedObjectContext]);
+					)
 	
+	// implementation
+	NSAttributeDescription *attrDesc = [[self entity] gvc_attributeNamed:key];
 	if ( attrDesc != nil )
 	{
 		if ((value == nil) || ([value isKindOfClass:[NSNull class]] == true ))
@@ -151,43 +153,66 @@
 			}
 		}
 	}
+
+	GVC_DBC_ENSURE(
+				   )
 }
 
 + (NSArray *)gvc_findAllObjects:(NSEntityDescription *)entity forPredicate:(NSPredicate *)pred inContext:(NSManagedObjectContext *)context
 {
-	GVC_ASSERT(entity != nil, @"Entity is required");
-	GVC_ASSERT(context != nil, @"Context is required");
-
+	GVC_DBC_REQUIRE(
+					GVC_DBC_FACT_NOT_NIL(entity);
+					GVC_DBC_FACT_NOT_NIL(context);
+					)
+	
+	// implementation
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
 	[request setEntity:entity];
 	[request setPredicate:pred];
 	
 	NSError *error = nil;
 	NSArray *array = [context executeFetchRequest:request error:&error];
-	if (error != nil) 
-	{
-		GVCLogError( @"Error %@", error );
-	}
+
+	GVC_DBC_ENSURE(
+				   GVC_DBC_FACT_NIL(error);
+				   )
+
 	return array;
 }
 
 + (NSManagedObject *)gvc_findObject:(NSEntityDescription *)entity forPredicate:(NSPredicate *)pred inContext:(NSManagedObjectContext *)context
 {
+	GVC_DBC_REQUIRE(
+					GVC_DBC_FACT_NOT_NIL(entity);
+					GVC_DBC_FACT_NOT_NIL(context);
+					)
+	
 	NSManagedObject *mo = nil;
-
+	
 	NSArray *array = [NSManagedObject gvc_findAllObjects:entity forPredicate:pred inContext:context];
-	if (gvc_IsEmpty(array) == NO) 
+	if (gvc_IsEmpty(array) == NO)
 	{
-		GVC_ASSERT([array count] == 1, @"Found more than one object matching %@", pred);
 		mo = [array objectAtIndex:0];
 	}
 	
-	return mo;	
+	GVC_DBC_ENSURE(
+				   // zero or one
+				   GVC_DBC_FACT([array count] <= 1);
+				   )
+
+	return mo;
 }
 
 
 + (NSArray *)gvc_findAllObjects:(NSEntityDescription *)entity forKeyValue:(NSDictionary *)dict inContext:(NSManagedObjectContext *)context
 {
+	GVC_DBC_REQUIRE(
+					GVC_DBC_FACT_NOT_NIL(entity);
+					GVC_DBC_FACT_NOT_NIL(context);
+					)
+	
+	// implementation
+	NSArray *results = nil;
 	NSPredicate *pred = nil;
 	if ( gvc_IsEmpty(dict) == NO )
 	{
@@ -231,8 +256,14 @@
 			pred = [NSCompoundPredicate andPredicateWithSubpredicates:qualifier];
 		}
 	}
+	
+	results = [NSManagedObject gvc_findAllObjects:entity forPredicate:pred inContext:context];
 
-	return [NSManagedObject gvc_findAllObjects:entity forPredicate:pred inContext:context];
+	GVC_DBC_ENSURE(
+				   GVC_DBC_FACT(results);
+				   )
+	
+	return results;
 }
 
 + (NSManagedObject *)gvc_findObject:(NSEntityDescription *)entity forKey:(NSString *)key andValue:(id)value inContext:(NSManagedObjectContext *)context
