@@ -15,6 +15,11 @@
 @property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+/**
+ * Return true if datastores that fail to migrate should be purged.  Default is NO
+ */
+- (BOOL)purgeFailedMigrations;
+
 - (NSArray *)modelLoadedOperations:(NSString *)name;
 
 /* NSNotification contains changes to be saved in main thead */
