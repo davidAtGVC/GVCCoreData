@@ -33,11 +33,11 @@
     GVCCSVParser *parser = [[GVCCSVParser alloc] initWithDelegate:self separator:@"," fieldNames:nil firstLineHeaders:YES];
     if ([parser parseFilename:[self csvFile] error:&anError] == YES)
     {
-        [self operationDidFailWithError:anError];
+        [self operationDidFinish];
     }
     else
     {
-        [self operationDidFinish];
+        [self operationDidFailWithError:anError];
     }
 }
 
