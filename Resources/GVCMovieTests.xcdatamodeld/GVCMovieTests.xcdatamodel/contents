@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Movie" representedClassName="Movie" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateReleased" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="movieID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="posterName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="revenue" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="studioID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trailerName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="directors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Talent" inverseName="moviesDirected" inverseEntity="Talent" syncable="YES"/>
+        <relationship name="plotSummary" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="PlotSummary" inverseName="movie" inverseEntity="PlotSummary" syncable="YES"/>
+        <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="movie" inverseEntity="Review" syncable="YES"/>
+        <relationship name="roles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MovieRole" inverseName="movie" inverseEntity="MovieRole" syncable="YES"/>
+        <relationship name="studio" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Studio" inverseName="movies" inverseEntity="Studio" syncable="YES"/>
+        <relationship name="voting" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Voting" inverseName="movie" inverseEntity="Voting" syncable="YES"/>
+    </entity>
+    <entity name="MovieRole" representedClassName="MovieRole" syncable="YES">
+        <attribute name="movieID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="roleName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="talentID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="movie" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Movie" inverseName="roles" inverseEntity="Movie" syncable="YES"/>
+        <relationship name="talent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Talent" inverseName="roles" inverseEntity="Talent" syncable="YES"/>
+    </entity>
+    <entity name="PlotSummary" representedClassName="PlotSummary" syncable="YES">
+        <attribute name="movieID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="movie" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Movie" inverseName="plotSummary" inverseEntity="Movie" syncable="YES"/>
+    </entity>
+    <entity name="Review" representedClassName="Review" syncable="YES">
+        <attribute name="movieID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="review" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reviewer" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="movie" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Movie" inverseName="reviews" inverseEntity="Movie" syncable="YES"/>
+    </entity>
+    <entity name="Studio" representedClassName="Studio" syncable="YES">
+        <attribute name="budget" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studioID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="movies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Movie" inverseName="studio" inverseEntity="Movie" syncable="YES"/>
+    </entity>
+    <entity name="Talent" representedClassName="Talent" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="talentID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="moviesDirected" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Movie" inverseName="directors" inverseEntity="Movie" syncable="YES"/>
+        <relationship name="photo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TalentPhoto" inverseName="talent" inverseEntity="TalentPhoto" syncable="YES"/>
+        <relationship name="roles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MovieRole" inverseName="talent" inverseEntity="MovieRole" syncable="YES"/>
+    </entity>
+    <entity name="TalentPhoto" representedClassName="TalentPhoto" syncable="YES">
+        <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="talentID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="talent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Talent" inverseName="photo" inverseEntity="Talent" syncable="YES"/>
+    </entity>
+    <entity name="Voting" representedClassName="Voting" syncable="YES">
+        <attribute name="movieID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="numberOfVotes" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="runningAverage" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="movie" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Movie" inverseName="voting" inverseEntity="Movie" syncable="YES"/>
+    </entity>
+    <configuration name="GVCMovieTests">
+        <memberEntity name="Movie"/>
+        <memberEntity name="MovieRole"/>
+        <memberEntity name="PlotSummary"/>
+        <memberEntity name="Review"/>
+        <memberEntity name="Studio"/>
+        <memberEntity name="Talent"/>
+        <memberEntity name="TalentPhoto"/>
+        <memberEntity name="Voting"/>
+    </configuration>
+    <elements>
+        <element name="TalentPhoto" positionX="-126" positionY="27" width="128" height="88"/>
+        <element name="Talent" positionX="-171" positionY="180" width="128" height="133"/>
+        <element name="MovieRole" positionX="-81" positionY="351" width="128" height="118"/>
+        <element name="PlotSummary" positionX="448" positionY="117" width="128" height="88"/>
+        <element name="Movie" positionX="243" positionY="192" width="128" height="268"/>
+        <element name="Voting" positionX="531" positionY="360" width="128" height="103"/>
+        <element name="Review" positionX="61" positionY="54" width="128" height="103"/>
+        <element name="Studio" positionX="484" positionY="207" width="128" height="103"/>
+    </elements>
+</model>

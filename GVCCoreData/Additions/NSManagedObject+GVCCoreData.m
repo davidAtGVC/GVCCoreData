@@ -138,15 +138,16 @@
 
 					break;
 				case NSBinaryDataAttributeType:
-//					if ( [value isKindOfClass:[NSNumber class]] == YES )
-//					{
-//						[self setValue:num forKey:[attrDesc name]];
-//					}
-//					else if ( [value respondsToSelector:@selector(intValue)] == YES)
-//					{
-//						num = [NSNumber numberWithInt:[value intValue]];
-//						[self setValue:num forKey:[attrDesc name]];
-//					}
+					if ( [value isKindOfClass:[NSData class]] == YES )
+					{
+						[self setValue:value forKey:[attrDesc name]];
+					}
+					else if ( [value isKindOfClass:[NSString class]] == YES )
+					{
+						// try to base64 decode the string
+						NSData *decoded = [NSData gvc_Base64Decoded:(NSString *)value];
+						[self setValue:decoded forKey:[attrDesc name]];
+					}
 					break;
 				default:
 					break;

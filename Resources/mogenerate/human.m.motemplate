@@ -1,9 +1,0 @@
-#import "<$managedObjectClassName$>.h"
-#import <GVCFoundation/GVCFoundation.h>
-#import <GVCCoreData/GVCCoreData.h>
-
-@implementation <$managedObjectClassName$>
-
-// Custom logic goes here.
-
-@end

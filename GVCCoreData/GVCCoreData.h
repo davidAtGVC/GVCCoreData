@@ -17,6 +17,7 @@
 /* 
  * 
  */
+#import "GVCCoreDatabase.h"
 #import "GVCDataFunctions.h"
 #import "GVCManagedObject.h"
 
@@ -25,6 +26,7 @@
  */
 #import "GVCCSVDataOperation.h"
 #import "GVCDataOperation.h"
+#import "GVCPlistDataOperation.h"
 #import "GVCXMLDataOperation.h"
 
 /* 

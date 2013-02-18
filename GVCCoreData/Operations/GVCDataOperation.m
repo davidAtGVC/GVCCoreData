@@ -42,14 +42,17 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contextDidSave:) name:NSManagedObjectContextDidSaveNotification object:[self managedObjectContext]];
 }
 
-- (void)saveContext
+- (BOOL)saveContext
 {
+	BOOL success = YES;
     NSError *moError = nil;
     if (([[self managedObjectContext] hasChanges] == YES) && ([[self managedObjectContext] save:&moError] == NO))
     {
         GVC_ASSERT_LOG(@"Save failed: %@\n%@", [moError localizedDescription], [moError userInfo]);
         [self operationDidFailWithError:moError];
+		success = NO;
     }
+	return success;
 }
 
 - (NSManagedObjectContext *)managedObjectContext

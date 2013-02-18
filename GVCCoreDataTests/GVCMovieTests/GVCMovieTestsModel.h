@@ -1,0 +1,8 @@
+#import "Movie.h"
+#import "MovieRole.h"
+#import "PlotSummary.h"
+#import "Review.h"
+#import "Studio.h"
+#import "Talent.h"
+#import "TalentPhoto.h"
+#import "Voting.h"

@@ -31,6 +31,42 @@
 		051B25E61557CA03001B4377 /* GVCCSVDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 051B25E41557CA03001B4377 /* GVCCSVDataOperation.m */; };
 		051B25F71558035F001B4377 /* GVCXMLDataOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 051B25F51558035F001B4377 /* GVCXMLDataOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		051B25F81558035F001B4377 /* GVCXMLDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 051B25F61558035F001B4377 /* GVCXMLDataOperation.m */; };
+		0550D6FB16D1591F0055B963 /* GVCMovieTests.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0550D6F916D1591F0055B963 /* GVCMovieTests.xcdatamodeld */; };
+		0550D71D16D15DDC0055B963 /* _Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D70116D15DDC0055B963 /* _Movie.m */; };
+		0550D71E16D15DDC0055B963 /* _MovieRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D70316D15DDC0055B963 /* _MovieRole.m */; };
+		0550D71F16D15DDC0055B963 /* _PlotSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D70516D15DDC0055B963 /* _PlotSummary.m */; };
+		0550D72016D15DDC0055B963 /* _Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D70716D15DDC0055B963 /* _Review.m */; };
+		0550D72116D15DDC0055B963 /* _Studio.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D70916D15DDC0055B963 /* _Studio.m */; };
+		0550D72216D15DDC0055B963 /* _TalentPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D70B16D15DDC0055B963 /* _TalentPhoto.m */; };
+		0550D72316D15DDC0055B963 /* _Voting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D70D16D15DDC0055B963 /* _Voting.m */; };
+		0550D72416D15DDC0055B963 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D71016D15DDC0055B963 /* Movie.m */; };
+		0550D72516D15DDC0055B963 /* MovieRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D71216D15DDC0055B963 /* MovieRole.m */; };
+		0550D72616D15DDC0055B963 /* PlotSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D71416D15DDC0055B963 /* PlotSummary.m */; };
+		0550D72716D15DDC0055B963 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D71616D15DDC0055B963 /* Review.m */; };
+		0550D72816D15DDC0055B963 /* Studio.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D71816D15DDC0055B963 /* Studio.m */; };
+		0550D72916D15DDC0055B963 /* TalentPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D71A16D15DDC0055B963 /* TalentPhoto.m */; };
+		0550D72A16D15DDC0055B963 /* Voting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D71C16D15DDC0055B963 /* Voting.m */; };
+		0550D72C16D15DFD0055B963 /* Movies.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0550D72B16D15DFD0055B963 /* Movies.plist */; };
+		0550D73216D15E8B0055B963 /* GVCPlistDataOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550D73016D15E8B0055B963 /* GVCPlistDataOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0550D73316D15E8B0055B963 /* GVCPlistDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D73116D15E8B0055B963 /* GVCPlistDataOperation.m */; };
+		0550D73516D1705A0055B963 /* Movie_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D73416D1705A0055B963 /* Movie_Tests.m */; };
+		0550D73616D1723D0055B963 /* libGVCFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D185BF1503C49B00EDBE80 /* libGVCFoundation.a */; };
+		0550D73716D1723D0055B963 /* libGVCUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D185CC1503C4A900EDBE80 /* libGVCUIKit.a */; };
+		0550D73816D1727B0055B963 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D185D31503C4DD00EDBE80 /* CoreData.framework */; };
+		0550D73E16D1727D0055B963 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0550D73916D1727B0055B963 /* CFNetwork.framework */; };
+		0550D73F16D1727D0055B963 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0550D73A16D1727B0055B963 /* CoreGraphics.framework */; };
+		0550D74016D1727D0055B963 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0550D73B16D1727C0055B963 /* CoreText.framework */; };
+		0550D74116D1727D0055B963 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0550D73C16D1727C0055B963 /* QuartzCore.framework */; };
+		0550D74216D1727D0055B963 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0550D73D16D1727D0055B963 /* Security.framework */; };
+		0550D74416D177CC0055B963 /* Talent_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D74316D177CC0055B963 /* Talent_Tests.m */; };
+		0550D74716D178570055B963 /* Talent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D74616D178570055B963 /* Talent.m */; };
+		0550D74A16D178650055B963 /* _Talent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D74916D178650055B963 /* _Talent.m */; };
+		0550D74D16D17C640055B963 /* GVCCoreDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550D74B16D17C630055B963 /* GVCCoreDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0550D74E16D17C640055B963 /* GVCCoreDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D74C16D17C630055B963 /* GVCCoreDatabase.m */; };
+		0550D75016D27A850055B963 /* TalentPhoto_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D74F16D27A850055B963 /* TalentPhoto_Tests.m */; };
+		0550D75216D27DAA0055B963 /* MovieRole_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D75116D27DAA0055B963 /* MovieRole_Tests.m */; };
+		0550D75416D27EFB0055B963 /* PlotSummary_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D75316D27EFB0055B963 /* PlotSummary_Tests.m */; };
+		0550D75616D27FBE0055B963 /* Studio_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D75516D27FBE0055B963 /* Studio_Tests.m */; };
 		0563F5861537D04500BC7D2D /* GVCCoreDataUIAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0563F5841537D04500BC7D2D /* GVCCoreDataUIAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0563F5871537D04500BC7D2D /* GVCCoreDataUIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0563F5851537D04500BC7D2D /* GVCCoreDataUIAppDelegate.m */; };
 		0594660D152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05946607152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -122,12 +158,59 @@
 		051B25D61557A88B001B4377 /* NSPropertyDescription+GVCCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPropertyDescription+GVCCoreData.m"; sourceTree = "<group>"; };
 		051B25E31557CA03001B4377 /* GVCCSVDataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCCSVDataOperation.h; sourceTree = "<group>"; };
 		051B25E41557CA03001B4377 /* GVCCSVDataOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCCSVDataOperation.m; sourceTree = "<group>"; };
-		051B25E81557DDAE001B4377 /* human.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.h.motemplate; sourceTree = "<group>"; };
-		051B25E91557DDAE001B4377 /* human.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.m.motemplate; sourceTree = "<group>"; };
-		051B25EA1557DDAE001B4377 /* machine.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.h.motemplate; sourceTree = "<group>"; };
-		051B25EB1557DDAE001B4377 /* machine.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.m.motemplate; sourceTree = "<group>"; };
 		051B25F51558035F001B4377 /* GVCXMLDataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCXMLDataOperation.h; sourceTree = "<group>"; };
 		051B25F61558035F001B4377 /* GVCXMLDataOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCXMLDataOperation.m; sourceTree = "<group>"; };
+		0550D6FA16D1591F0055B963 /* GVCMovieTests.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GVCMovieTests.xcdatamodel; sourceTree = "<group>"; };
+		0550D6FC16D15CC10055B963 /* updateModel.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = updateModel.sh; sourceTree = "<group>"; };
+		0550D70016D15DDC0055B963 /* _Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Movie.h; sourceTree = "<group>"; };
+		0550D70116D15DDC0055B963 /* _Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Movie.m; sourceTree = "<group>"; };
+		0550D70216D15DDC0055B963 /* _MovieRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MovieRole.h; sourceTree = "<group>"; };
+		0550D70316D15DDC0055B963 /* _MovieRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MovieRole.m; sourceTree = "<group>"; };
+		0550D70416D15DDC0055B963 /* _PlotSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _PlotSummary.h; sourceTree = "<group>"; };
+		0550D70516D15DDC0055B963 /* _PlotSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _PlotSummary.m; sourceTree = "<group>"; };
+		0550D70616D15DDC0055B963 /* _Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Review.h; sourceTree = "<group>"; };
+		0550D70716D15DDC0055B963 /* _Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Review.m; sourceTree = "<group>"; };
+		0550D70816D15DDC0055B963 /* _Studio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Studio.h; sourceTree = "<group>"; };
+		0550D70916D15DDC0055B963 /* _Studio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Studio.m; sourceTree = "<group>"; };
+		0550D70A16D15DDC0055B963 /* _TalentPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TalentPhoto.h; sourceTree = "<group>"; };
+		0550D70B16D15DDC0055B963 /* _TalentPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TalentPhoto.m; sourceTree = "<group>"; };
+		0550D70C16D15DDC0055B963 /* _Voting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Voting.h; sourceTree = "<group>"; };
+		0550D70D16D15DDC0055B963 /* _Voting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Voting.m; sourceTree = "<group>"; };
+		0550D70E16D15DDC0055B963 /* GVCMovieTestsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCMovieTestsModel.h; sourceTree = "<group>"; };
+		0550D70F16D15DDC0055B963 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		0550D71016D15DDC0055B963 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		0550D71116D15DDC0055B963 /* MovieRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieRole.h; sourceTree = "<group>"; };
+		0550D71216D15DDC0055B963 /* MovieRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieRole.m; sourceTree = "<group>"; };
+		0550D71316D15DDC0055B963 /* PlotSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlotSummary.h; sourceTree = "<group>"; };
+		0550D71416D15DDC0055B963 /* PlotSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlotSummary.m; sourceTree = "<group>"; };
+		0550D71516D15DDC0055B963 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
+		0550D71616D15DDC0055B963 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
+		0550D71716D15DDC0055B963 /* Studio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Studio.h; sourceTree = "<group>"; };
+		0550D71816D15DDC0055B963 /* Studio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Studio.m; sourceTree = "<group>"; };
+		0550D71916D15DDC0055B963 /* TalentPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalentPhoto.h; sourceTree = "<group>"; };
+		0550D71A16D15DDC0055B963 /* TalentPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalentPhoto.m; sourceTree = "<group>"; };
+		0550D71B16D15DDC0055B963 /* Voting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voting.h; sourceTree = "<group>"; };
+		0550D71C16D15DDC0055B963 /* Voting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voting.m; sourceTree = "<group>"; };
+		0550D72B16D15DFD0055B963 /* Movies.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Movies.plist; sourceTree = "<group>"; };
+		0550D73016D15E8B0055B963 /* GVCPlistDataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCPlistDataOperation.h; sourceTree = "<group>"; };
+		0550D73116D15E8B0055B963 /* GVCPlistDataOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCPlistDataOperation.m; sourceTree = "<group>"; };
+		0550D73416D1705A0055B963 /* Movie_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie_Tests.m; sourceTree = "<group>"; };
+		0550D73916D1727B0055B963 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0550D73A16D1727B0055B963 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0550D73B16D1727C0055B963 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		0550D73C16D1727C0055B963 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0550D73D16D1727D0055B963 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0550D74316D177CC0055B963 /* Talent_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Talent_Tests.m; sourceTree = "<group>"; };
+		0550D74516D178570055B963 /* Talent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Talent.h; sourceTree = "<group>"; };
+		0550D74616D178570055B963 /* Talent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Talent.m; sourceTree = "<group>"; };
+		0550D74816D178650055B963 /* _Talent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Talent.h; sourceTree = "<group>"; };
+		0550D74916D178650055B963 /* _Talent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Talent.m; sourceTree = "<group>"; };
+		0550D74B16D17C630055B963 /* GVCCoreDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCCoreDatabase.h; sourceTree = "<group>"; };
+		0550D74C16D17C630055B963 /* GVCCoreDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCCoreDatabase.m; sourceTree = "<group>"; };
+		0550D74F16D27A850055B963 /* TalentPhoto_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalentPhoto_Tests.m; sourceTree = "<group>"; };
+		0550D75116D27DAA0055B963 /* MovieRole_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieRole_Tests.m; sourceTree = "<group>"; };
+		0550D75316D27EFB0055B963 /* PlotSummary_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlotSummary_Tests.m; sourceTree = "<group>"; };
+		0550D75516D27FBE0055B963 /* Studio_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Studio_Tests.m; sourceTree = "<group>"; };
 		0563F5841537D04500BC7D2D /* GVCCoreDataUIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCCoreDataUIAppDelegate.h; sourceTree = "<group>"; };
 		0563F5851537D04500BC7D2D /* GVCCoreDataUIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCCoreDataUIAppDelegate.m; sourceTree = "<group>"; };
 		05946607152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEntityDescription+GVCCoreData.h"; sourceTree = "<group>"; };
@@ -188,6 +271,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0550D73E16D1727D0055B963 /* CFNetwork.framework in Frameworks */,
+				0550D73F16D1727D0055B963 /* CoreGraphics.framework in Frameworks */,
+				0550D74016D1727D0055B963 /* CoreText.framework in Frameworks */,
+				0550D74116D1727D0055B963 /* QuartzCore.framework in Frameworks */,
+				0550D74216D1727D0055B963 /* Security.framework in Frameworks */,
+				0550D73816D1727B0055B963 /* CoreData.framework in Frameworks */,
+				0550D73616D1723D0055B963 /* libGVCFoundation.a in Frameworks */,
+				0550D73716D1723D0055B963 /* libGVCUIKit.a in Frameworks */,
 				05D1859E1503C47900EDBE80 /* SenTestingKit.framework in Frameworks */,
 				05D185A01503C47900EDBE80 /* UIKit.framework in Frameworks */,
 				05D185A11503C47900EDBE80 /* Foundation.framework in Frameworks */,
@@ -198,15 +289,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		051B25E71557DDAE001B4377 /* mogenerate */ = {
+		0550D6FE16D15DDC0055B963 /* GVCMovieTests */ = {
 			isa = PBXGroup;
 			children = (
-				051B25E81557DDAE001B4377 /* human.h.motemplate */,
-				051B25E91557DDAE001B4377 /* human.m.motemplate */,
-				051B25EA1557DDAE001B4377 /* machine.h.motemplate */,
-				051B25EB1557DDAE001B4377 /* machine.m.motemplate */,
+				0550D6FF16D15DDC0055B963 /* _ */,
+				0550D70E16D15DDC0055B963 /* GVCMovieTestsModel.h */,
+				0550D70F16D15DDC0055B963 /* Movie.h */,
+				0550D71016D15DDC0055B963 /* Movie.m */,
+				0550D71116D15DDC0055B963 /* MovieRole.h */,
+				0550D71216D15DDC0055B963 /* MovieRole.m */,
+				0550D71316D15DDC0055B963 /* PlotSummary.h */,
+				0550D71416D15DDC0055B963 /* PlotSummary.m */,
+				0550D71516D15DDC0055B963 /* Review.h */,
+				0550D71616D15DDC0055B963 /* Review.m */,
+				0550D71716D15DDC0055B963 /* Studio.h */,
+				0550D71816D15DDC0055B963 /* Studio.m */,
+				0550D74516D178570055B963 /* Talent.h */,
+				0550D74616D178570055B963 /* Talent.m */,
+				0550D71916D15DDC0055B963 /* TalentPhoto.h */,
+				0550D71A16D15DDC0055B963 /* TalentPhoto.m */,
+				0550D71B16D15DDC0055B963 /* Voting.h */,
+				0550D71C16D15DDC0055B963 /* Voting.m */,
 			);
-			path = mogenerate;
+			path = GVCMovieTests;
+			sourceTree = "<group>";
+		};
+		0550D6FF16D15DDC0055B963 /* _ */ = {
+			isa = PBXGroup;
+			children = (
+				0550D74816D178650055B963 /* _Talent.h */,
+				0550D74916D178650055B963 /* _Talent.m */,
+				0550D70016D15DDC0055B963 /* _Movie.h */,
+				0550D70116D15DDC0055B963 /* _Movie.m */,
+				0550D70216D15DDC0055B963 /* _MovieRole.h */,
+				0550D70316D15DDC0055B963 /* _MovieRole.m */,
+				0550D70416D15DDC0055B963 /* _PlotSummary.h */,
+				0550D70516D15DDC0055B963 /* _PlotSummary.m */,
+				0550D70616D15DDC0055B963 /* _Review.h */,
+				0550D70716D15DDC0055B963 /* _Review.m */,
+				0550D70816D15DDC0055B963 /* _Studio.h */,
+				0550D70916D15DDC0055B963 /* _Studio.m */,
+				0550D70A16D15DDC0055B963 /* _TalentPhoto.h */,
+				0550D70B16D15DDC0055B963 /* _TalentPhoto.m */,
+				0550D70C16D15DDC0055B963 /* _Voting.h */,
+				0550D70D16D15DDC0055B963 /* _Voting.m */,
+			);
+			path = _;
 			sourceTree = "<group>";
 		};
 		0563F5591537CCFF00BC7D2D /* UI */ = {
@@ -228,6 +356,8 @@
 				051B25E41557CA03001B4377 /* GVCCSVDataOperation.m */,
 				051B25F51558035F001B4377 /* GVCXMLDataOperation.h */,
 				051B25F61558035F001B4377 /* GVCXMLDataOperation.m */,
+				0550D73016D15E8B0055B963 /* GVCPlistDataOperation.h */,
+				0550D73116D15E8B0055B963 /* GVCPlistDataOperation.m */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -272,6 +402,11 @@
 		05D1858E1503C47700EDBE80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0550D73916D1727B0055B963 /* CFNetwork.framework */,
+				0550D73A16D1727B0055B963 /* CoreGraphics.framework */,
+				0550D73B16D1727C0055B963 /* CoreText.framework */,
+				0550D73C16D1727C0055B963 /* QuartzCore.framework */,
+				0550D73D16D1727D0055B963 /* Security.framework */,
 				05D1858F1503C47700EDBE80 /* Foundation.framework */,
 				05D1859D1503C47900EDBE80 /* SenTestingKit.framework */,
 				05D185D31503C4DD00EDBE80 /* CoreData.framework */,
@@ -294,6 +429,8 @@
 				05D185ED1503C6B400EDBE80 /* GVCManagedObject.h */,
 				05D185EE1503C6B400EDBE80 /* GVCManagedObject.m */,
 				05D185921503C47800EDBE80 /* Supporting Files */,
+				0550D74B16D17C630055B963 /* GVCCoreDatabase.h */,
+				0550D74C16D17C630055B963 /* GVCCoreDatabase.m */,
 			);
 			path = GVCCoreData;
 			sourceTree = "<group>";
@@ -309,9 +446,16 @@
 		05D185A51503C47900EDBE80 /* GVCCoreDataTests */ = {
 			isa = PBXGroup;
 			children = (
+				05D185A61503C47900EDBE80 /* Supporting Files */,
+				0550D6FE16D15DDC0055B963 /* GVCMovieTests */,
 				05D185AB1503C47A00EDBE80 /* GVCCoreDataTests.h */,
 				05D185AC1503C47A00EDBE80 /* GVCCoreDataTests.m */,
-				05D185A61503C47900EDBE80 /* Supporting Files */,
+				0550D73416D1705A0055B963 /* Movie_Tests.m */,
+				0550D74316D177CC0055B963 /* Talent_Tests.m */,
+				0550D74F16D27A850055B963 /* TalentPhoto_Tests.m */,
+				0550D75116D27DAA0055B963 /* MovieRole_Tests.m */,
+				0550D75316D27EFB0055B963 /* PlotSummary_Tests.m */,
+				0550D75516D27FBE0055B963 /* Studio_Tests.m */,
 			);
 			path = GVCCoreDataTests;
 			sourceTree = "<group>";
@@ -346,16 +490,18 @@
 		05D185D71503C56700EDBE80 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0550D72B16D15DFD0055B963 /* Movies.plist */,
 				05D185D81503C56800EDBE80 /* BuildKitHeader.sh */,
 				059939E8160542750020BDD9 /* BuildDocs.sh */,
 				05D185D91503C56800EDBE80 /* GitIgnore.txt */,
 				05F94D2315EAB5B50066BF2E /* BuildDoxygen.sh */,
 				05F94D2415EAB5B50066BF2E /* doxygen.config */,
+				0550D6FC16D15CC10055B963 /* updateModel.sh */,
 				05D185DA1503C56800EDBE80 /* GVCDebug.xcconfig */,
 				05D185DB1503C56800EDBE80 /* GVCRelease.xcconfig */,
-				051B25E71557DDAE001B4377 /* mogenerate */,
 				05D185DC1503C56800EDBE80 /* Licenses */,
 				05D185DE1503C56800EDBE80 /* Templates */,
+				0550D6F916D1591F0055B963 /* GVCMovieTests.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -429,6 +575,8 @@
 				051B25D71557A88B001B4377 /* NSPropertyDescription+GVCCoreData.h in Headers */,
 				05191CBB158A8F4A001F08A0 /* GVCManagedObjectEditTableViewController.h in Headers */,
 				05191CC2158A9015001F08A0 /* GVCManagedObjectTableViewController.h in Headers */,
+				0550D73216D15E8B0055B963 /* GVCPlistDataOperation.h in Headers */,
+				0550D74D16D17C640055B963 /* GVCCoreDatabase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +607,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05D185B31503C47A00EDBE80 /* Build configuration list for PBXNativeTarget "GVCCoreDataTests" */;
 			buildPhases = (
+				0550D6FD16D15D370055B963 /* ShellScript */,
 				05D185971503C47900EDBE80 /* Sources */,
 				05D185981503C47900EDBE80 /* Frameworks */,
 				05D185991503C47900EDBE80 /* Resources */,
@@ -548,12 +697,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				05D185AA1503C47900EDBE80 /* InfoPlist.strings in Resources */,
+				0550D72C16D15DFD0055B963 /* Movies.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0550D6FD16D15D370055B963 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = Resources/updateModel.sh;
+		};
 		0597E79E15EAB6AA005CC64F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -615,6 +778,8 @@
 				05D00FA0155BCD32009F2837 /* GVCUIViewSearchableTableController.m in Sources */,
 				05191CBC158A8F4A001F08A0 /* GVCManagedObjectEditTableViewController.m in Sources */,
 				05191CC3158A9015001F08A0 /* GVCManagedObjectTableViewController.m in Sources */,
+				0550D73316D15E8B0055B963 /* GVCPlistDataOperation.m in Sources */,
+				0550D74E16D17C640055B963 /* GVCCoreDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +788,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				05D185AD1503C47A00EDBE80 /* GVCCoreDataTests.m in Sources */,
+				0550D6FB16D1591F0055B963 /* GVCMovieTests.xcdatamodeld in Sources */,
+				0550D71D16D15DDC0055B963 /* _Movie.m in Sources */,
+				0550D71E16D15DDC0055B963 /* _MovieRole.m in Sources */,
+				0550D71F16D15DDC0055B963 /* _PlotSummary.m in Sources */,
+				0550D72016D15DDC0055B963 /* _Review.m in Sources */,
+				0550D72116D15DDC0055B963 /* _Studio.m in Sources */,
+				0550D72216D15DDC0055B963 /* _TalentPhoto.m in Sources */,
+				0550D72316D15DDC0055B963 /* _Voting.m in Sources */,
+				0550D72416D15DDC0055B963 /* Movie.m in Sources */,
+				0550D72516D15DDC0055B963 /* MovieRole.m in Sources */,
+				0550D72616D15DDC0055B963 /* PlotSummary.m in Sources */,
+				0550D72716D15DDC0055B963 /* Review.m in Sources */,
+				0550D72816D15DDC0055B963 /* Studio.m in Sources */,
+				0550D72916D15DDC0055B963 /* TalentPhoto.m in Sources */,
+				0550D72A16D15DDC0055B963 /* Voting.m in Sources */,
+				0550D73516D1705A0055B963 /* Movie_Tests.m in Sources */,
+				0550D74416D177CC0055B963 /* Talent_Tests.m in Sources */,
+				0550D74716D178570055B963 /* Talent.m in Sources */,
+				0550D74A16D178650055B963 /* _Talent.m in Sources */,
+				0550D75016D27A850055B963 /* TalentPhoto_Tests.m in Sources */,
+				0550D75216D27DAA0055B963 /* MovieRole_Tests.m in Sources */,
+				0550D75416D27EFB0055B963 /* PlotSummary_Tests.m in Sources */,
+				0550D75616D27FBE0055B963 /* Studio_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,6 +1082,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0550D6F916D1591F0055B963 /* GVCMovieTests.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0550D6FA16D1591F0055B963 /* GVCMovieTests.xcdatamodel */,
+			);
+			currentVersion = 0550D6FA16D1591F0055B963 /* GVCMovieTests.xcdatamodel */;
+			path = GVCMovieTests.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 05D185831503C47700EDBE80 /* Project object */;
 }

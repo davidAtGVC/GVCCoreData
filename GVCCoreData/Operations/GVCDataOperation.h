@@ -21,7 +21,13 @@ typedef void (^GVCDataSavedOperationBlock)(GVCOperation *operation, NSNotificati
 
 // subclasses should call initialize from the - main method.  This ensures the managedObjectContext is intialized in the correct thread
 - (void)initializeCoreData;
-- (void)saveContext;
+
+/**
+ * Saves the managed object context if the context has changes.  Calls operationDidFail and returns NO on failure
+ * @returns success of save
+ */
+- (BOOL)saveContext;
+
 @property (readonly, nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 - (NSEntityDescription *)entityForName:(NSString *)name;
