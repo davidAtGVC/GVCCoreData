@@ -34,4 +34,6 @@
 #pragma mark - Search
 - (NSArray *)scopeKeys;
 
+- (UITableViewCell *)configuredCellForTableView:(UITableView *)tv andData:(NSManagedObject *)obj;
+
 @end

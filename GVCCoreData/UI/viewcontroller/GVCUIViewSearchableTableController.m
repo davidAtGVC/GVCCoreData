@@ -10,6 +10,10 @@
 #import <GVCFoundation/GVCFoundation.h>
 #import <GVCCoreData/GVCCoreData.h>
 
+@interface GVCUIViewSearchableTableController ()
+@property (strong, nonatomic) NSPredicate *fetchPredicate;
+@end
+
 @implementation GVCUIViewSearchableTableController
 
 @synthesize fetchedResultsController;
@@ -31,6 +35,13 @@
         [self setSearchBar:strongSearchBar];
     }
 }
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    self.fetchedResultsController = nil;
+}
+
 
 - (NSEntityDescription *)rootEntity
 {
@@ -78,7 +89,7 @@
 
 - (NSPredicate *)filterPredicate
 {
-	return nil;
+	return [self fetchPredicate];
 }
 
 - (NSString *)sectionKeypath
@@ -111,6 +122,11 @@
         managedObjectContext = [(GVCCoreDataUIAppDelegate *)appdel managedObjectContext];
 	}
 	return managedObjectContext;
+}
+
+- (UITableViewCell *)configuredCellForTableView:(UITableView *)tv andData:(NSManagedObject *)obj
+{
+	return nil;
 }
 
 #pragma mark -
@@ -176,26 +192,8 @@
 {
 	static NSString *CellIdentifier = @"CoreDataTableCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (tableView == [self tableView]) 
-    {
-        // normal table view population
-        if (cell == nil) 
-        {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        }
-    }
-    else if (tableView == [[self searchDisplayController] searchResultsTableView])
-    {
-        // search view population
-        if (cell == nil) 
-        {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        }
-    }
-
+    UITableViewCell *cell = nil;
 	NSInteger secCount = [[[self fetchedResultsController] sections] count];
-	
 	if ( [indexPath section] < secCount )
 	{
 		// in a valid section
@@ -207,9 +205,21 @@
 			// valid row
 			// Configure the cell.
 			NSManagedObject *managedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-            [[cell textLabel] setText:[managedObject description]];
+            cell = [self configuredCellForTableView:tableView andData:managedObject];
+            if (cell == nil)
+            {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+                [[cell textLabel] setText:[managedObject description]];
+            }
 		}
 	}
+
+    if (cell == nil)
+	{
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+		[[cell textLabel] setText:[indexPath description]];
+	}
+
 	
     return cell;
 }
@@ -231,7 +241,7 @@
 		[fetchRequest setEntity:entity];
 		
 		// Set the batch size to a suitable number.
-		[fetchRequest setFetchBatchSize:20];
+		[fetchRequest setFetchBatchSize:100];
 		
 		// Edit the sort key as appropriate.
 		NSArray *sortDescriptors = [self sortDescriptors];
@@ -272,15 +282,20 @@
 
 - (void)setFilterPredicate:(NSPredicate *)predicate;
 {
-	[[[self fetchedResultsController] fetchRequest] setPredicate:predicate];
-	
-	NSError *error = nil;
-	if ([[self fetchedResultsController] performFetch:&error] == NO) 
-	{
-		GVCLogError(@"Unresolved error %@, %@", error, [error userInfo]);
-		exit(-1);
-	}           
-	[[self tableView] reloadData];
+    [self setFetchPredicate:predicate];
+    
+    if ( [[[[self fetchedResultsController] fetchRequest] predicate] isEqual:[self fetchPredicate]] == NO )
+    {
+        [[[self fetchedResultsController] fetchRequest] setPredicate:[self fetchPredicate]];
+        
+        NSError *error = nil;
+        if ([[self fetchedResultsController] performFetch:&error] == NO)
+        {
+            GVCLogError(@"Unresolved error %@, %@", error, [error userInfo]);
+            exit(-1);
+        }           
+        [[self tableView] reloadData];
+    }
 }
 
 
