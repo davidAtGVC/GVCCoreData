@@ -144,7 +144,6 @@
 - (void)viewWillAppear:(BOOL)animated 
 {
 	[super viewWillAppear:animated];
-    [self reload:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated 
@@ -272,7 +271,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)idx
 {
-	return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:idx];
+	return [[self fetchedResultsController] sectionForSectionIndexTitle:title atIndex:idx];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView 
@@ -322,7 +321,7 @@
 
     UITableViewCell *cell = nil;
 	NSInteger secCount = [[[self fetchedResultsController] sections] count];
-	
+
 	if ( [indexPath section] < secCount )
 	{
 		// in a valid section
