@@ -33,6 +33,7 @@
  * UI 
  */
 #import "GVCCoreDataUIAppDelegate.h"
+#import "GVCDatabaseUIApplicationDelegate.h"
 
 /* 
  * UI viewcontroller 

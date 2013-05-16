@@ -19,6 +19,10 @@
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+/**
+ * Returns all the currently configured databases
+ */
++ (NSArray *)allDatabases;
 
 /**
  * Finds or allocates the database for the specified model name

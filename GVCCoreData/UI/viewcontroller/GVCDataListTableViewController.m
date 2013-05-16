@@ -133,6 +133,11 @@
     {
         managedObjectContext = [(GVCCoreDataUIAppDelegate *)appdel managedObjectContext];
 	}
+	else
+	{
+		GVCCoreDatabase *database = [GVCCoreDatabase findDatabaseForEntityName:[self rootEntityName]];
+		managedObjectContext = [database managedObjectContext];
+	}
 	return managedObjectContext;
 }
 

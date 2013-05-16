@@ -69,6 +69,8 @@
 		0550D75616D27FBE0055B963 /* Studio_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550D75516D27FBE0055B963 /* Studio_Tests.m */; };
 		0563F5861537D04500BC7D2D /* GVCCoreDataUIAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0563F5841537D04500BC7D2D /* GVCCoreDataUIAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0563F5871537D04500BC7D2D /* GVCCoreDataUIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0563F5851537D04500BC7D2D /* GVCCoreDataUIAppDelegate.m */; };
+		0572C309174462E300BB8A1F /* GVCDatabaseUIApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0572C307174462E300BB8A1F /* GVCDatabaseUIApplicationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0572C30A174462E300BB8A1F /* GVCDatabaseUIApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0572C308174462E300BB8A1F /* GVCDatabaseUIApplicationDelegate.m */; };
 		0594660D152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05946607152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0594660E152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 05946608152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.m */; };
 		0594660F152BD75C004A8B1C /* NSManagedObject+GVCCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05946609152BD75C004A8B1C /* NSManagedObject+GVCCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -213,6 +215,8 @@
 		0550D75516D27FBE0055B963 /* Studio_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Studio_Tests.m; sourceTree = "<group>"; };
 		0563F5841537D04500BC7D2D /* GVCCoreDataUIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCCoreDataUIAppDelegate.h; sourceTree = "<group>"; };
 		0563F5851537D04500BC7D2D /* GVCCoreDataUIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCCoreDataUIAppDelegate.m; sourceTree = "<group>"; };
+		0572C307174462E300BB8A1F /* GVCDatabaseUIApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCDatabaseUIApplicationDelegate.h; sourceTree = "<group>"; };
+		0572C308174462E300BB8A1F /* GVCDatabaseUIApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCDatabaseUIApplicationDelegate.m; sourceTree = "<group>"; };
 		05946607152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEntityDescription+GVCCoreData.h"; sourceTree = "<group>"; };
 		05946608152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSEntityDescription+GVCCoreData.m"; sourceTree = "<group>"; };
 		05946609152BD75C004A8B1C /* NSManagedObject+GVCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+GVCCoreData.h"; sourceTree = "<group>"; };
@@ -343,6 +347,8 @@
 				05D00F98155BCD05009F2837 /* viewcontroller */,
 				0563F5841537D04500BC7D2D /* GVCCoreDataUIAppDelegate.h */,
 				0563F5851537D04500BC7D2D /* GVCCoreDataUIAppDelegate.m */,
+				0572C307174462E300BB8A1F /* GVCDatabaseUIApplicationDelegate.h */,
+				0572C308174462E300BB8A1F /* GVCDatabaseUIApplicationDelegate.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -577,6 +583,7 @@
 				05191CC2158A9015001F08A0 /* GVCManagedObjectTableViewController.h in Headers */,
 				0550D73216D15E8B0055B963 /* GVCPlistDataOperation.h in Headers */,
 				0550D74D16D17C640055B963 /* GVCCoreDatabase.h in Headers */,
+				0572C309174462E300BB8A1F /* GVCDatabaseUIApplicationDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,6 +787,7 @@
 				05191CC3158A9015001F08A0 /* GVCManagedObjectTableViewController.m in Sources */,
 				0550D73316D15E8B0055B963 /* GVCPlistDataOperation.m in Sources */,
 				0550D74E16D17C640055B963 /* GVCCoreDatabase.m in Sources */,
+				0572C30A174462E300BB8A1F /* GVCDatabaseUIApplicationDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

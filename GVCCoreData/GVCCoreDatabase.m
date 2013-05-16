@@ -50,7 +50,7 @@ static NSMutableDictionary *databasesByEntityName = nil;
 + (GVCCoreDatabase *)findDatabaseForEntityName:(NSString *)entityName
 {
 	GVCCoreDatabase *found = nil;
-	NSArray *allDatabases = [databasesByEntityName allValues];
+	NSArray *allDatabases = [self allDatabases];
 	for (GVCCoreDatabase *database in allDatabases)
 	{
 		NSEntityDescription *entityDesc = [NSEntityDescription entityForName:entityName inManagedObjectContext:[database managedObjectContext]];
@@ -61,6 +61,11 @@ static NSMutableDictionary *databasesByEntityName = nil;
 		}
 	}
 	return found;
+}
+
++ (NSArray *)allDatabases
+{
+	return [databasesByEntityName allValues];
 }
 
 - (id)initWithModel:(NSString *)modelName purgeFailedMigrations:(BOOL)purge
