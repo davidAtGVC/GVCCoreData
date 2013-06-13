@@ -32,9 +32,12 @@
 			NSString *modelName = [[momdPath lastPathComponent] stringByDeletingPathExtension];
 			NSURL *modelURL = [NSURL fileURLWithPath:momdPath];
 			NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-			NSArray *hl7Entities = [model entitiesForConfiguration:modelName];
-			GVC_ASSERT([[model entities] gvc_isEqualToArrayInAnyOrder:hl7Entities], @"Configuration for %@ does not include all entities", modelName);
-			
+
+			NSMutableSet *entities = [NSMutableSet setWithArray:[model entitiesForConfiguration:modelName]];
+			NSSet *modelset = [NSSet setWithArray:[model entities]];
+			[entities minusSet:modelset];
+			GVC_ASSERT(gvc_IsEmpty(entities), @"Configuration does not include all entities %@", entities);
+
 			GVC_ASSERT([allModels objectForKey:modelName] == nil, @"Loaded duplicate model named %@", modelName);
 			[allModels setObject:model forKey:modelName];
 		}

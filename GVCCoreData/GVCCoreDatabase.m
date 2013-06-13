@@ -82,8 +82,10 @@ static NSMutableDictionary *databasesByEntityName = nil;
 		
 		NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
 		
-		NSArray *entities = [model entitiesForConfiguration:modelName];
-		GVC_ASSERT([[model entities] gvc_isEqualToArrayInAnyOrder:entities], @"Configuration does not include all entities");
+		NSMutableSet *entities = [NSMutableSet setWithArray:[model entitiesForConfiguration:modelName]];
+		NSSet *modelset = [NSSet setWithArray:[model entities]];
+		[entities minusSet:modelset];
+		GVC_ASSERT(gvc_IsEmpty(entities), @"Configuration does not include all entities %@", entities);
 		
 		[self setManagedObjectModel:model];
 		[self setPersistentStoreCoordinator:[[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]]];
