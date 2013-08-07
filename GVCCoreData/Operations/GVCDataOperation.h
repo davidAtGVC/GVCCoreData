@@ -17,7 +17,7 @@ typedef void (^GVCDataSavedOperationBlock)(GVCOperation *operation, NSNotificati
 - initForPersistentStoreCoordinator:(NSPersistentStoreCoordinator *)coordinator;
 
 // this block is always called from the main thread
-@property (readwrite, copy) GVCDataSavedOperationBlock contextDidSaveBlock;
+@property (copy, nonatomic) GVCDataSavedOperationBlock contextDidSaveBlock;
 
 // subclasses should call initialize from the - main method.  This ensures the managedObjectContext is intialized in the correct thread
 - (void)initializeCoreData;
