@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0516350D17CBAB3A00949AD3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0516350C17CBAB3A00949AD3 /* SystemConfiguration.framework */; };
 		05191CBB158A8F4A001F08A0 /* GVCManagedObjectEditTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05191CB9158A8F49001F08A0 /* GVCManagedObjectEditTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05191CBC158A8F4A001F08A0 /* GVCManagedObjectEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05191CBA158A8F49001F08A0 /* GVCManagedObjectEditTableViewController.m */; };
 		05191CC2158A9015001F08A0 /* GVCManagedObjectTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05191CC0158A9015001F08A0 /* GVCManagedObjectTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -152,6 +153,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0516350C17CBAB3A00949AD3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		05191CB9158A8F49001F08A0 /* GVCManagedObjectEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCManagedObjectEditTableViewController.h; sourceTree = "<group>"; };
 		05191CBA158A8F49001F08A0 /* GVCManagedObjectEditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCManagedObjectEditTableViewController.m; sourceTree = "<group>"; };
 		05191CC0158A9015001F08A0 /* GVCManagedObjectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCManagedObjectTableViewController.h; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0516350D17CBAB3A00949AD3 /* SystemConfiguration.framework in Frameworks */,
 				0550D73E16D1727D0055B963 /* CFNetwork.framework in Frameworks */,
 				0550D73F16D1727D0055B963 /* CoreGraphics.framework in Frameworks */,
 				0550D74016D1727D0055B963 /* CoreText.framework in Frameworks */,
@@ -386,8 +389,6 @@
 		05D185811503C47700EDBE80 = {
 			isa = PBXGroup;
 			children = (
-				05D185B61503C49A00EDBE80 /* GVCFoundation.xcodeproj */,
-				05D185C21503C4A900EDBE80 /* GVCUIKit.xcodeproj */,
 				05D185911503C47800EDBE80 /* GVCCoreData */,
 				05D185A51503C47900EDBE80 /* GVCCoreDataTests */,
 				05D185D71503C56700EDBE80 /* Resources */,
@@ -408,10 +409,13 @@
 		05D1858E1503C47700EDBE80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05D185B61503C49A00EDBE80 /* GVCFoundation.xcodeproj */,
+				05D185C21503C4A900EDBE80 /* GVCUIKit.xcodeproj */,
 				0550D73916D1727B0055B963 /* CFNetwork.framework */,
 				0550D73A16D1727B0055B963 /* CoreGraphics.framework */,
 				0550D73B16D1727C0055B963 /* CoreText.framework */,
 				0550D73C16D1727C0055B963 /* QuartzCore.framework */,
+				0516350C17CBAB3A00949AD3 /* SystemConfiguration.framework */,
 				0550D73D16D1727D0055B963 /* Security.framework */,
 				05D1858F1503C47700EDBE80 /* Foundation.framework */,
 				05D1859D1503C47900EDBE80 /* SenTestingKit.framework */,
