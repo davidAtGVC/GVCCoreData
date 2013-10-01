@@ -217,6 +217,7 @@
 		0550D75516D27FBE0055B963 /* Studio_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Studio_Tests.m; sourceTree = "<group>"; };
 		0563F5841537D04500BC7D2D /* GVCCoreDataUIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCCoreDataUIAppDelegate.h; sourceTree = "<group>"; };
 		0563F5851537D04500BC7D2D /* GVCCoreDataUIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCCoreDataUIAppDelegate.m; sourceTree = "<group>"; };
+		05665CB617FB409D00A16838 /* GVCDebugTest.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = GVCDebugTest.xcconfig; sourceTree = "<group>"; };
 		0572C307174462E300BB8A1F /* GVCDatabaseUIApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCDatabaseUIApplicationDelegate.h; sourceTree = "<group>"; };
 		0572C308174462E300BB8A1F /* GVCDatabaseUIApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCDatabaseUIApplicationDelegate.m; sourceTree = "<group>"; };
 		05946607152BD75C004A8B1C /* NSEntityDescription+GVCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEntityDescription+GVCCoreData.h"; sourceTree = "<group>"; };
@@ -500,6 +501,7 @@
 		05D185D71503C56700EDBE80 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				05665CB617FB409D00A16838 /* GVCDebugTest.xcconfig */,
 				0550D72B16D15DFD0055B963 /* Movies.plist */,
 				05D185D81503C56800EDBE80 /* BuildKitHeader.sh */,
 				059939E8160542750020BDD9 /* BuildDocs.sh */,
@@ -872,9 +874,9 @@
 			};
 			name = Release;
 		};
-		05BC74CB16B33C4900B186A9 /* Squish */ = {
+		05BC74CB16B33C4900B186A9 /* DebugTest */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05D185DA1503C56800EDBE80 /* GVCDebug.xcconfig */;
+			baseConfigurationReference = 05665CB617FB409D00A16838 /* GVCDebugTest.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -900,9 +902,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
-			name = Squish;
+			name = DebugTest;
 		};
-		05BC74CC16B33C4900B186A9 /* Squish */ = {
+		05BC74CC16B33C4900B186A9 /* DebugTest */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
@@ -914,9 +916,9 @@
 				PUBLIC_HEADERS_FOLDER_PATH = "Headers/${TARGET_NAME}";
 				SKIP_INSTALL = YES;
 			};
-			name = Squish;
+			name = DebugTest;
 		};
-		05BC74CD16B33C4900B186A9 /* Squish */ = {
+		05BC74CD16B33C4900B186A9 /* DebugTest */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -929,14 +931,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
-			name = Squish;
+			name = DebugTest;
 		};
-		05BC74CE16B33C4900B186A9 /* Squish */ = {
+		05BC74CE16B33C4900B186A9 /* DebugTest */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
-			name = Squish;
+			name = DebugTest;
 		};
 		05D185AE1503C47A00EDBE80 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1057,7 +1059,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0597E79C15EAB6A5005CC64F /* Debug */,
-				05BC74CE16B33C4900B186A9 /* Squish */,
+				05BC74CE16B33C4900B186A9 /* DebugTest */,
 				0597E79D15EAB6A5005CC64F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1067,7 +1069,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05D185AE1503C47A00EDBE80 /* Debug */,
-				05BC74CB16B33C4900B186A9 /* Squish */,
+				05BC74CB16B33C4900B186A9 /* DebugTest */,
 				05D185AF1503C47A00EDBE80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1077,7 +1079,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05D185B11503C47A00EDBE80 /* Debug */,
-				05BC74CC16B33C4900B186A9 /* Squish */,
+				05BC74CC16B33C4900B186A9 /* DebugTest */,
 				05D185B21503C47A00EDBE80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1087,7 +1089,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05D185B41503C47A00EDBE80 /* Debug */,
-				05BC74CD16B33C4900B186A9 /* Squish */,
+				05BC74CD16B33C4900B186A9 /* DebugTest */,
 				05D185B51503C47A00EDBE80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
