@@ -10,6 +10,9 @@
 #import <GVCFoundation/GVCFoundation.h>
 #import <GVCCoreData/GVCCoreData.h>
 
+GVC_DEFINE_STR( GVCDataOperationErrorDomain )
+
+
 @interface GVCDataLoadXMLNode : NSObject
 @property (strong, nonatomic) NSString *name;
 @end
@@ -51,14 +54,13 @@
 
 @implementation GVCXMLDataOperation
 
-@synthesize loadFile;
-
 - (id)initForPersistentStoreCoordinator:(NSPersistentStoreCoordinator *)coordinator usingFile:(NSString *)file;
 {
 	self = [super initForPersistentStoreCoordinator:coordinator];
 	if ( self != nil )
 	{
         [self setLoadFile:file];
+        [self setInsertOnly:NO];
 	}
 	
     return self;
@@ -119,19 +121,33 @@
 {
 	NSManagedObject *mo = [self findManagedObjectFor:node];
 	
-	if ( [node isDeleteAction] == NO )
-	{
-		if ( mo == nil )
-		{
-			mo = [self insertRecord:[self managedObjectContext] forEntity:node];
-		}
-		
-		[self updateRecord:mo withEntity:node];
-	}
-	else if ( mo != nil )
-	{
-		[[self managedObjectContext] deleteObject:mo];
-	}
+    if ( mo != nil )
+    {
+        // object exists
+        if ( [node isDeleteAction] == YES )
+        {
+            // delete
+            [[self managedObjectContext] deleteObject:mo];
+        }
+        else if ( [self insertOnly] == NO )
+        {
+            // update
+            [self updateRecord:mo withEntity:node];
+        }
+        else
+        {
+            // error, record exists, but insert only
+            NSDictionary *userInfo = @{NSLocalizedDescriptionKey: GVC_LocalizedClassString(@"Managed Object exists", @"Managed Object exists for insert only operation"), NSLocalizedFailureReasonErrorKey: [node description]};
+
+            NSError *err = [NSError errorWithDomain:GVCDataOperationErrorDomain code:-1 userInfo:userInfo];
+            [self operationDidFailWithError:err];
+        }
+    }
+    else if ( [node isDeleteAction] == NO )
+    {
+        // only insert if it is not a delete
+        [self insertRecord:[self managedObjectContext] forEntity:node];
+    }
     
 	NSError *error = nil;
 	if ([[self managedObjectContext] hasChanges] == YES)
@@ -139,8 +155,7 @@
 		if ([[self managedObjectContext] save:&error] == NO)
 		{
 			[self operationDidFailWithError:error];
-			GVC_ASSERT_LOG(@"Save failed: %@\n%@", [error localizedDescription], [error userInfo]);
-		} 
+		}
 	}
 }
 
@@ -228,22 +243,20 @@
 
 
 @implementation GVCDataLoadXMLNode
-@synthesize name;
 @end
 
 @implementation AttributeNode
-@synthesize text;
+- (NSString *)description
+{
+    return GVC_SPRINTF(@"attribute='%@'='%@'", [self name], [self text]);
+}
 @end
 
 @implementation PredicateNode
-@synthesize text;
-@synthesize type;
-@synthesize targetAttributeName;
 @end
 
 
 @implementation RelationshipNode
-@synthesize predicates;
 - (id) init
 {
 	self = [super init];
@@ -255,15 +268,11 @@
 }
 - (void)addPredicate:(AttributeNode *)node
 {
-	[predicates addObject:node];
+	[[self predicates] addObject:node];
 }
 @end
 
 @implementation EntityNode
-@synthesize action;
-@synthesize attributes;
-@synthesize relationships;
-
 - (id) init
 {
 	self = [super init];
@@ -277,7 +286,7 @@
 - (AttributeNode *)gvcSyncId
 {
 	AttributeNode *gvcSyncNode = nil;
-	for (AttributeNode *attNode in attributes)
+	for (AttributeNode *attNode in [self attributes])
 	{
 		if ( [[attNode name] isEqualToString:GVCManagedObject_SYNC_ID_ATTRIBUTE] == YES )
 		{
@@ -290,20 +299,20 @@
 
 - (BOOL)isDeleteAction
 {
-	return ((gvc_IsEmpty(action) == NO) && ([[action lowercaseString] isEqualToString:@"delete"] == YES));
+	return ((gvc_IsEmpty([self action]) == NO) && ([[[self action] lowercaseString] isEqualToString:@"delete"] == YES));
 }
 
 - (void)addAttribute:(AttributeNode *)node;
 {
-	[attributes addObject:node];
+	[[self attributes] addObject:node];
 }
 - (void)addRelationship:(RelationshipNode *)node;
 {
-	[relationships addObject:node];
+	[[self relationships] addObject:node];
 }
 
 - (NSString *)description
 {
-    return GVC_SPRINTF(@"%@ name='%@'", [super description], [self name]);
+    return GVC_SPRINTF(@"%@ name='%@' %@", [super description], [self name], [self gvcSyncId]);
 }
 @end
