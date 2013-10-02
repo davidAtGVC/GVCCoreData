@@ -80,6 +80,7 @@
 		05946612152BD75C004A8B1C /* NSManagedObjectContext+GVCCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0594660C152BD75C004A8B1C /* NSManagedObjectContext+GVCCoreData.m */; };
 		05946627152BD93F004A8B1C /* GVCDataOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 05946625152BD93F004A8B1C /* GVCDataOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05946628152BD93F004A8B1C /* GVCDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 05946626152BD93F004A8B1C /* GVCDataOperation.m */; };
+		05A29A7517FC790D003AF3A3 /* GVCCoreDataTestCaseObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A29A7417FC790D003AF3A3 /* GVCCoreDataTestCaseObserver.m */; };
 		05D00F9B155BCD05009F2837 /* GVCDataListTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D00F99155BCD05009F2837 /* GVCDataListTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05D00F9C155BCD05009F2837 /* GVCDataListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D00F9A155BCD05009F2837 /* GVCDataListTableViewController.m */; };
 		05D00F9F155BCD32009F2837 /* GVCUIViewSearchableTableController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D00F9D155BCD32009F2837 /* GVCUIViewSearchableTableController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -229,6 +230,7 @@
 		05946625152BD93F004A8B1C /* GVCDataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCDataOperation.h; sourceTree = "<group>"; };
 		05946626152BD93F004A8B1C /* GVCDataOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCDataOperation.m; sourceTree = "<group>"; };
 		059939E8160542750020BDD9 /* BuildDocs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = BuildDocs.sh; sourceTree = "<group>"; };
+		05A29A7417FC790D003AF3A3 /* GVCCoreDataTestCaseObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCCoreDataTestCaseObserver.m; sourceTree = "<group>"; };
 		05D00F99155BCD05009F2837 /* GVCDataListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCDataListTableViewController.h; sourceTree = "<group>"; };
 		05D00F9A155BCD05009F2837 /* GVCDataListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCDataListTableViewController.m; sourceTree = "<group>"; };
 		05D00F9D155BCD32009F2837 /* GVCUIViewSearchableTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCUIViewSearchableTableController.h; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 		05D185A51503C47900EDBE80 /* GVCCoreDataTests */ = {
 			isa = PBXGroup;
 			children = (
+				05A29A7417FC790D003AF3A3 /* GVCCoreDataTestCaseObserver.m */,
 				05D185A61503C47900EDBE80 /* Supporting Files */,
 				0550D6FE16D15DDC0055B963 /* GVCMovieTests */,
 				05D185AB1503C47A00EDBE80 /* GVCCoreDataTests.h */,
@@ -604,6 +607,7 @@
 				05D185881503C47700EDBE80 /* Sources */,
 				05D185891503C47700EDBE80 /* Frameworks */,
 				05D1858A1503C47700EDBE80 /* Headers */,
+				05A29A6B17FC7804003AF3A3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -744,6 +748,20 @@
 			shellScript = "# build documents using Doxygen\n# ${PROJECT_DIR}/Resources/BuildDoxygen.sh\n\n# build documents using appledocs\n${PROJECT_DIR}/Resources/BuildDocs.sh";
 			showEnvVarsInLog = 0;
 		};
+		05A29A6B17FC7804003AF3A3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/Resources/GCOVR_exportenv.sh";
+			showEnvVarsInLog = 0;
+		};
 		05D1859A1503C47900EDBE80 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -802,6 +820,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05D185AD1503C47A00EDBE80 /* GVCCoreDataTests.m in Sources */,
+				05A29A7517FC790D003AF3A3 /* GVCCoreDataTestCaseObserver.m in Sources */,
 				0550D6FB16D1591F0055B963 /* GVCMovieTests.xcdatamodeld in Sources */,
 				0550D71D16D15DDC0055B963 /* _Movie.m in Sources */,
 				0550D71E16D15DDC0055B963 /* _MovieRole.m in Sources */,
