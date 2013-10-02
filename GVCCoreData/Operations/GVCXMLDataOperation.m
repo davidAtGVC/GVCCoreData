@@ -103,6 +103,10 @@ GVC_DEFINE_STR( GVCDataOperationErrorDomain )
 			idx ++;
 //			[self setProgressPercent:(idx*100)/[castArray count]];
 			[self processEntityNode:node];
+            if ( [self operationError] != nil )
+            {
+                break;
+            }
 		}
 	}
 	else if ( [digestResults isKindOfClass:[EntityNode class]] == YES )
@@ -137,7 +141,7 @@ GVC_DEFINE_STR( GVCDataOperationErrorDomain )
         else
         {
             // error, record exists, but insert only
-            NSDictionary *userInfo = @{NSLocalizedDescriptionKey: GVC_LocalizedClassString(@"Managed Object exists", @"Managed Object exists for insert only operation"), NSLocalizedFailureReasonErrorKey: [node description]};
+            NSDictionary *userInfo = @{NSLocalizedDescriptionKey: GVC_LocalizedClassString(@"Managed Object exists", @"Managed Object exists for insert only operation"), NSLocalizedFailureReasonErrorKey: [node description], NSLocalizedRecoverySuggestionErrorKey: [mo description] };
 
             NSError *err = [NSError errorWithDomain:GVCDataOperationErrorDomain code:-1 userInfo:userInfo];
             [self operationDidFailWithError:err];
@@ -146,7 +150,8 @@ GVC_DEFINE_STR( GVCDataOperationErrorDomain )
     else if ( [node isDeleteAction] == NO )
     {
         // only insert if it is not a delete
-        [self insertRecord:[self managedObjectContext] forEntity:node];
+        mo = [self insertRecord:[self managedObjectContext] forEntity:node];
+        [self updateRecord:mo withEntity:node];
     }
     
 	NSError *error = nil;
