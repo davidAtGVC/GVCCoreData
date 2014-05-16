@@ -131,10 +131,10 @@
         [self setSectionName:aname];
         if ( gvc_IsEmpty(propertyList) == NO )
         {
-            for (NSObject *propObj in propertyList)
-            {
-//                if ( [propObj in
-            }
+//            for (NSObject *propObj in propertyList)
+//            {
+////                if ( [propObj in
+//            }
         }
     }
     return self;    
