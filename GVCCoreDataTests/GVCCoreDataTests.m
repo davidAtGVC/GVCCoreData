@@ -18,12 +18,12 @@
 
 - (NSString *)pathForResource:(NSString *)name extension:(NSString *)ext
 {
-	STAssertNotNil(name, @"Resource name cannot be nil");
+	XCTAssertNotNil(name, @"Resource name cannot be nil");
 	
 	NSString *file = [[NSBundle bundleForClass:[self class]] pathForResource:name ofType:ext];
 	
-	STAssertNotNil(file, @"Unable to locate %@.%@ file", name, ext);
-	STAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:file], @"File does not exist %@", file);
+	XCTAssertNotNil(file, @"Unable to locate %@.%@ file", name, ext);
+	XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:file], @"File does not exist %@", file);
 	
 	return file;
 }
@@ -38,7 +38,7 @@
 	}];
 	[op setDidFailWithErrorBlock:^(GVCOperation *operation, NSError *operror) {
 		operationFinished = YES;
-		STAssertTrue(NO, @"Operation failed with error %@", operror);
+		XCTAssertTrue(NO, @"Operation failed with error %@", operror);
 	}];
 	[[self queue] addOperation:op];
 	[[self queue] waitUntilAllOperationsAreFinished];
@@ -67,14 +67,14 @@
 		GVCLogError(@"Deleting Old store %@", modelSQL);
 		if ( [[NSFileManager defaultManager] fileExistsAtPath:modelSQL] == YES )
 		{
-			STAssertTrue([[NSFileManager defaultManager] removeItemAtPath:modelSQL error:nil], @"Failed to remove old file %@", modelSQL);
+			XCTAssertTrue([[NSFileManager defaultManager] removeItemAtPath:modelSQL error:nil], @"Failed to remove old file %@", modelSQL);
 		}
 	
 		// everything is configured on the first call
 		GVCCoreDatabase *initialDatabase = [GVCCoreDatabase databaseForModelName:modelName];
 		
 		NSString *dataPath = [self pathForResource:@"Movies" extension:@"plist"];
-		STAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:dataPath], @"Failed to find datafile 'Movies.plist'");
+		XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:dataPath], @"Failed to find datafile 'Movies.plist'");
 		if ( [[NSFileManager defaultManager] fileExistsAtPath:dataPath] == YES )
 		{
 			GVCLogError(@"Loading %@", dataPath);

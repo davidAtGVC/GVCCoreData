@@ -6,7 +6,7 @@
  *
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <GVCFoundation/GVCFoundation.h>
 #import <GVCCoreData/GVCCoreData.h>
 
@@ -41,28 +41,28 @@
 	GVCLogError(@"Database %@", dbase);
 	
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[MovieRole entityName] inManagedObjectContext:[self managedObjectContext]];
-	STAssertNotNil(entity, @"Could not find entity 'MovieRole'");
+	XCTAssertNotNil(entity, @"Could not find entity 'MovieRole'");
 	
 	NSArray *all = [MovieRole gvc_findAllObjects:entity forPredicate:nil inContext:[self managedObjectContext]];
-	STAssertNotNil(all, @"Failed to find MovieRole");
-	STAssertFalse(gvc_IsEmpty(all), @"No MovieRole found");
+	XCTAssertNotNil(all, @"Failed to find MovieRole");
+	XCTAssertFalse(gvc_IsEmpty(all), @"No MovieRole found");
 	
-	STAssertTrue([all count] == 453, @"Incorrect MovieRole count 453 != %d", [all count]);
+	XCTAssertTrue([all count] == 453, @"Incorrect MovieRole count 453 != %@", @([all count]));
 }
 
 - (void)testMovieRoleRelationship
 {
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[MovieRole entityName] inManagedObjectContext:[self managedObjectContext]];
-	STAssertNotNil(entity, @"Could not find entity 'MovieRole'");
+	XCTAssertNotNil(entity, @"Could not find entity 'MovieRole'");
 	
 	NSArray *all = [MovieRole gvc_findAllObjects:entity forPredicate:nil inContext:[self managedObjectContext]];
-	STAssertNotNil(all, @"Failed to find MovieRole");
-	STAssertFalse(gvc_IsEmpty(all), @"No MovieRole found");
+	XCTAssertNotNil(all, @"Failed to find MovieRole");
+	XCTAssertFalse(gvc_IsEmpty(all), @"No MovieRole found");
 	
 	for (MovieRole *record in all)
 	{
-		STAssertTrue(([record movieID] == nil) || ([record movie] != nil), @"MovieRole (movieID %@) does not have Movie", [record movieID]);
-		STAssertTrue(([record talentID] == nil) || ([record talent] != nil), @"MovieRole (talentId %@) does not have Talent", [record talentID]);
+		XCTAssertTrue(([record movieID] == nil) || ([record movie] != nil), @"MovieRole (movieID %@) does not have Movie", [record movieID]);
+		XCTAssertTrue(([record talentID] == nil) || ([record talent] != nil), @"MovieRole (talentId %@) does not have Talent", [record talentID]);
 	}
 }
 

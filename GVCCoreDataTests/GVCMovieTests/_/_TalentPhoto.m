@@ -12,9 +12,6 @@ const struct TalentPhotoRelationships TalentPhotoRelationships = {
 	.talent = @"talent",
 };
 
-const struct TalentPhotoFetchedProperties TalentPhotoFetchedProperties = {
-};
-
 @implementation TalentPhotoID
 @end
 
@@ -40,7 +37,7 @@ const struct TalentPhotoFetchedProperties TalentPhotoFetchedProperties = {
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-	
+
 	if ([key isEqualToString:@"talentIDValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"talentID"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -50,19 +47,9 @@ const struct TalentPhotoFetchedProperties TalentPhotoFetchedProperties = {
 	return keyPaths;
 }
 
-
-
-
 @dynamic photo;
 
-
-
-
-
-
 @dynamic talentID;
-
-
 
 - (int64_t)talentIDValue {
 	NSNumber *result = [self talentID];
@@ -70,7 +57,7 @@ const struct TalentPhotoFetchedProperties TalentPhotoFetchedProperties = {
 }
 
 - (void)setTalentIDValue:(int64_t)value_ {
-	[self setTalentID:[NSNumber numberWithLongLong:value_]];
+	[self setTalentID:@(value_)];
 }
 
 - (int64_t)primitiveTalentIDValue {
@@ -79,20 +66,10 @@ const struct TalentPhotoFetchedProperties TalentPhotoFetchedProperties = {
 }
 
 - (void)setPrimitiveTalentIDValue:(int64_t)value_ {
-	[self setPrimitiveTalentID:[NSNumber numberWithLongLong:value_]];
+	[self setPrimitiveTalentID:@(value_)];
 }
-
-
-
-
 
 @dynamic talent;
 
-	
-
-
-
-
-
-
 @end
+

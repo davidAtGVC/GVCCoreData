@@ -6,7 +6,7 @@
  *
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <GVCFoundation/GVCFoundation.h>
 #import <GVCCoreData/GVCCoreData.h>
 
@@ -41,13 +41,13 @@
 	GVCLogError(@"Database %@", dbase);
 	
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[Studio entityName] inManagedObjectContext:[self managedObjectContext]];
-	STAssertNotNil(entity, @"Could not find entity 'Studio'");
+	XCTAssertNotNil(entity, @"Could not find entity 'Studio'");
 	
 	NSArray *all = [Studio gvc_findAllObjects:entity forPredicate:nil inContext:[self managedObjectContext]];
-	STAssertNotNil(all, @"Failed to find Studio");
-	STAssertFalse(gvc_IsEmpty(all), @"No Studio found");
+	XCTAssertNotNil(all, @"Failed to find Studio");
+	XCTAssertFalse(gvc_IsEmpty(all), @"No Studio found");
 	
-	STAssertTrue([all count] == 38, @"Incorrect Studio count 38 != %d", [all count]);
+	XCTAssertTrue([all count] == 38, @"Incorrect Studio count 38 != %@", @([all count]));
 }
 
 //- (void)testStudioRelationship

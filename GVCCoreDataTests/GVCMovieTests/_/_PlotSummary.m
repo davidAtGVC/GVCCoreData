@@ -12,9 +12,6 @@ const struct PlotSummaryRelationships PlotSummaryRelationships = {
 	.movie = @"movie",
 };
 
-const struct PlotSummaryFetchedProperties PlotSummaryFetchedProperties = {
-};
-
 @implementation PlotSummaryID
 @end
 
@@ -40,7 +37,7 @@ const struct PlotSummaryFetchedProperties PlotSummaryFetchedProperties = {
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-	
+
 	if ([key isEqualToString:@"movieIDValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"movieID"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -50,12 +47,7 @@ const struct PlotSummaryFetchedProperties PlotSummaryFetchedProperties = {
 	return keyPaths;
 }
 
-
-
-
 @dynamic movieID;
-
-
 
 - (int64_t)movieIDValue {
 	NSNumber *result = [self movieID];
@@ -63,7 +55,7 @@ const struct PlotSummaryFetchedProperties PlotSummaryFetchedProperties = {
 }
 
 - (void)setMovieIDValue:(int64_t)value_ {
-	[self setMovieID:[NSNumber numberWithLongLong:value_]];
+	[self setMovieID:@(value_)];
 }
 
 - (int64_t)primitiveMovieIDValue {
@@ -72,27 +64,12 @@ const struct PlotSummaryFetchedProperties PlotSummaryFetchedProperties = {
 }
 
 - (void)setPrimitiveMovieIDValue:(int64_t)value_ {
-	[self setPrimitiveMovieID:[NSNumber numberWithLongLong:value_]];
+	[self setPrimitiveMovieID:@(value_)];
 }
-
-
-
-
 
 @dynamic summary;
 
-
-
-
-
-
 @dynamic movie;
 
-	
-
-
-
-
-
-
 @end
+

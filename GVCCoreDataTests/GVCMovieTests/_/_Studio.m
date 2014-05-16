@@ -13,9 +13,6 @@ const struct StudioRelationships StudioRelationships = {
 	.movies = @"movies",
 };
 
-const struct StudioFetchedProperties StudioFetchedProperties = {
-};
-
 @implementation StudioID
 @end
 
@@ -41,7 +38,7 @@ const struct StudioFetchedProperties StudioFetchedProperties = {
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-	
+
 	if ([key isEqualToString:@"studioIDValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"studioID"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -51,26 +48,11 @@ const struct StudioFetchedProperties StudioFetchedProperties = {
 	return keyPaths;
 }
 
-
-
-
 @dynamic budget;
-
-
-
-
-
 
 @dynamic name;
 
-
-
-
-
-
 @dynamic studioID;
-
-
 
 - (int64_t)studioIDValue {
 	NSNumber *result = [self studioID];
@@ -78,7 +60,7 @@ const struct StudioFetchedProperties StudioFetchedProperties = {
 }
 
 - (void)setStudioIDValue:(int64_t)value_ {
-	[self setStudioID:[NSNumber numberWithLongLong:value_]];
+	[self setStudioID:@(value_)];
 }
 
 - (int64_t)primitiveStudioIDValue {
@@ -87,29 +69,19 @@ const struct StudioFetchedProperties StudioFetchedProperties = {
 }
 
 - (void)setPrimitiveStudioIDValue:(int64_t)value_ {
-	[self setPrimitiveStudioID:[NSNumber numberWithLongLong:value_]];
+	[self setPrimitiveStudioID:@(value_)];
 }
-
-
-
-
 
 @dynamic movies;
 
-	
 - (NSMutableSet*)moviesSet {
 	[self willAccessValueForKey:@"movies"];
-  
+
 	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"movies"];
-  
+
 	[self didAccessValueForKey:@"movies"];
 	return result;
 }
-	
-
-
-
-
-
 
 @end
+

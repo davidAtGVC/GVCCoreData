@@ -13,13 +13,7 @@ extern const struct PlotSummaryRelationships {
 	__unsafe_unretained NSString *movie;
 } PlotSummaryRelationships;
 
-extern const struct PlotSummaryFetchedProperties {
-} PlotSummaryFetchedProperties;
-
 @class Movie;
-
-
-
 
 @interface PlotSummaryID : NSManagedObjectID {}
 @end
@@ -30,50 +24,25 @@ extern const struct PlotSummaryFetchedProperties {
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 - (PlotSummaryID*)objectID;
 
-
-
-
-
 @property (nonatomic, strong) NSNumber* movieID;
 
-
-
-@property int64_t movieIDValue;
+@property (atomic) int64_t movieIDValue;
 - (int64_t)movieIDValue;
 - (void)setMovieIDValue:(int64_t)value_;
 
 //- (BOOL)validateMovieID:(id*)value_ error:(NSError**)error_;
 
-
-
-
-
 @property (nonatomic, strong) NSString* summary;
 
-
-
 //- (BOOL)validateSummary:(id*)value_ error:(NSError**)error_;
-
-
-
-
 
 @property (nonatomic, strong) Movie *movie;
 
 //- (BOOL)validateMovie:(id*)value_ error:(NSError**)error_;
 
-
-
-
-
-@end
-
-@interface _PlotSummary (CoreDataGeneratedAccessors)
-
 @end
 
 @interface _PlotSummary (CoreDataGeneratedPrimitiveAccessors)
-
 
 - (NSNumber*)primitiveMovieID;
 - (void)setPrimitiveMovieID:(NSNumber*)value;
@@ -81,18 +50,10 @@ extern const struct PlotSummaryFetchedProperties {
 - (int64_t)primitiveMovieIDValue;
 - (void)setPrimitiveMovieIDValue:(int64_t)value_;
 
-
-
-
 - (NSString*)primitiveSummary;
 - (void)setPrimitiveSummary:(NSString*)value;
 
-
-
-
-
 - (Movie*)primitiveMovie;
 - (void)setPrimitiveMovie:(Movie*)value;
-
 
 @end

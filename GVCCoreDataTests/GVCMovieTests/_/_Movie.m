@@ -24,9 +24,6 @@ const struct MovieRelationships MovieRelationships = {
 	.voting = @"voting",
 };
 
-const struct MovieFetchedProperties MovieFetchedProperties = {
-};
-
 @implementation MovieID
 @end
 
@@ -52,7 +49,7 @@ const struct MovieFetchedProperties MovieFetchedProperties = {
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-	
+
 	if ([key isEqualToString:@"movieIDValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"movieID"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -67,26 +64,11 @@ const struct MovieFetchedProperties MovieFetchedProperties = {
 	return keyPaths;
 }
 
-
-
-
 @dynamic category;
-
-
-
-
-
 
 @dynamic dateReleased;
 
-
-
-
-
-
 @dynamic movieID;
-
-
 
 - (int64_t)movieIDValue {
 	NSNumber *result = [self movieID];
@@ -94,7 +76,7 @@ const struct MovieFetchedProperties MovieFetchedProperties = {
 }
 
 - (void)setMovieIDValue:(int64_t)value_ {
-	[self setMovieID:[NSNumber numberWithLongLong:value_]];
+	[self setMovieID:@(value_)];
 }
 
 - (int64_t)primitiveMovieIDValue {
@@ -103,37 +85,16 @@ const struct MovieFetchedProperties MovieFetchedProperties = {
 }
 
 - (void)setPrimitiveMovieIDValue:(int64_t)value_ {
-	[self setPrimitiveMovieID:[NSNumber numberWithLongLong:value_]];
+	[self setPrimitiveMovieID:@(value_)];
 }
-
-
-
-
 
 @dynamic posterName;
 
-
-
-
-
-
 @dynamic rated;
-
-
-
-
-
 
 @dynamic revenue;
 
-
-
-
-
-
 @dynamic studioID;
-
-
 
 - (int64_t)studioIDValue {
 	NSNumber *result = [self studioID];
@@ -141,7 +102,7 @@ const struct MovieFetchedProperties MovieFetchedProperties = {
 }
 
 - (void)setStudioIDValue:(int64_t)value_ {
-	[self setStudioID:[NSNumber numberWithLongLong:value_]];
+	[self setStudioID:@(value_)];
 }
 
 - (int64_t)primitiveStudioIDValue {
@@ -150,90 +111,60 @@ const struct MovieFetchedProperties MovieFetchedProperties = {
 }
 
 - (void)setPrimitiveStudioIDValue:(int64_t)value_ {
-	[self setPrimitiveStudioID:[NSNumber numberWithLongLong:value_]];
+	[self setPrimitiveStudioID:@(value_)];
 }
-
-
-
-
 
 @dynamic title;
 
-
-
-
-
-
 @dynamic trailerName;
-
-
-
-
-
 
 @dynamic directors;
 
-	
 - (NSMutableSet*)directorsSet {
 	[self willAccessValueForKey:@"directors"];
-  
+
 	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"directors"];
-  
+
 	[self didAccessValueForKey:@"directors"];
 	return result;
 }
-	
 
 @dynamic plotSummary;
 
-	
-
 @dynamic reviews;
 
-	
 - (NSMutableSet*)reviewsSet {
 	[self willAccessValueForKey:@"reviews"];
-  
+
 	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"reviews"];
-  
+
 	[self didAccessValueForKey:@"reviews"];
 	return result;
 }
-	
 
 @dynamic roles;
 
-	
 - (NSMutableSet*)rolesSet {
 	[self willAccessValueForKey:@"roles"];
-  
+
 	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"roles"];
-  
+
 	[self didAccessValueForKey:@"roles"];
 	return result;
 }
-	
 
 @dynamic studio;
 
-	
-
 @dynamic voting;
 
-	
 - (NSMutableSet*)votingSet {
 	[self willAccessValueForKey:@"voting"];
-  
+
 	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"voting"];
-  
+
 	[self didAccessValueForKey:@"voting"];
 	return result;
 }
-	
-
-
-
-
-
 
 @end
+

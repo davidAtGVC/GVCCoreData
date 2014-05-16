@@ -14,9 +14,6 @@ const struct MovieRoleRelationships MovieRoleRelationships = {
 	.talent = @"talent",
 };
 
-const struct MovieRoleFetchedProperties MovieRoleFetchedProperties = {
-};
-
 @implementation MovieRoleID
 @end
 
@@ -42,7 +39,7 @@ const struct MovieRoleFetchedProperties MovieRoleFetchedProperties = {
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-	
+
 	if ([key isEqualToString:@"movieIDValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"movieID"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -57,12 +54,7 @@ const struct MovieRoleFetchedProperties MovieRoleFetchedProperties = {
 	return keyPaths;
 }
 
-
-
-
 @dynamic movieID;
-
-
 
 - (int64_t)movieIDValue {
 	NSNumber *result = [self movieID];
@@ -70,7 +62,7 @@ const struct MovieRoleFetchedProperties MovieRoleFetchedProperties = {
 }
 
 - (void)setMovieIDValue:(int64_t)value_ {
-	[self setMovieID:[NSNumber numberWithLongLong:value_]];
+	[self setMovieID:@(value_)];
 }
 
 - (int64_t)primitiveMovieIDValue {
@@ -79,23 +71,12 @@ const struct MovieRoleFetchedProperties MovieRoleFetchedProperties = {
 }
 
 - (void)setPrimitiveMovieIDValue:(int64_t)value_ {
-	[self setPrimitiveMovieID:[NSNumber numberWithLongLong:value_]];
+	[self setPrimitiveMovieID:@(value_)];
 }
-
-
-
-
 
 @dynamic roleName;
 
-
-
-
-
-
 @dynamic talentID;
-
-
 
 - (int64_t)talentIDValue {
 	NSNumber *result = [self talentID];
@@ -103,7 +84,7 @@ const struct MovieRoleFetchedProperties MovieRoleFetchedProperties = {
 }
 
 - (void)setTalentIDValue:(int64_t)value_ {
-	[self setTalentID:[NSNumber numberWithLongLong:value_]];
+	[self setTalentID:@(value_)];
 }
 
 - (int64_t)primitiveTalentIDValue {
@@ -112,24 +93,12 @@ const struct MovieRoleFetchedProperties MovieRoleFetchedProperties = {
 }
 
 - (void)setPrimitiveTalentIDValue:(int64_t)value_ {
-	[self setPrimitiveTalentID:[NSNumber numberWithLongLong:value_]];
+	[self setPrimitiveTalentID:@(value_)];
 }
-
-
-
-
 
 @dynamic movie;
 
-	
-
 @dynamic talent;
 
-	
-
-
-
-
-
-
 @end
+

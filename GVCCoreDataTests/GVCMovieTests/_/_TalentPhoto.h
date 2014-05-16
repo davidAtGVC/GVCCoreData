@@ -13,13 +13,7 @@ extern const struct TalentPhotoRelationships {
 	__unsafe_unretained NSString *talent;
 } TalentPhotoRelationships;
 
-extern const struct TalentPhotoFetchedProperties {
-} TalentPhotoFetchedProperties;
-
 @class Talent;
-
-
-
 
 @interface TalentPhotoID : NSManagedObjectID {}
 @end
@@ -30,56 +24,28 @@ extern const struct TalentPhotoFetchedProperties {
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 - (TalentPhotoID*)objectID;
 
-
-
-
-
 @property (nonatomic, strong) NSData* photo;
-
-
 
 //- (BOOL)validatePhoto:(id*)value_ error:(NSError**)error_;
 
-
-
-
-
 @property (nonatomic, strong) NSNumber* talentID;
 
-
-
-@property int64_t talentIDValue;
+@property (atomic) int64_t talentIDValue;
 - (int64_t)talentIDValue;
 - (void)setTalentIDValue:(int64_t)value_;
 
 //- (BOOL)validateTalentID:(id*)value_ error:(NSError**)error_;
 
-
-
-
-
 @property (nonatomic, strong) Talent *talent;
 
 //- (BOOL)validateTalent:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@end
-
-@interface _TalentPhoto (CoreDataGeneratedAccessors)
 
 @end
 
 @interface _TalentPhoto (CoreDataGeneratedPrimitiveAccessors)
 
-
 - (NSData*)primitivePhoto;
 - (void)setPrimitivePhoto:(NSData*)value;
-
-
-
 
 - (NSNumber*)primitiveTalentID;
 - (void)setPrimitiveTalentID:(NSNumber*)value;
@@ -87,12 +53,7 @@ extern const struct TalentPhotoFetchedProperties {
 - (int64_t)primitiveTalentIDValue;
 - (void)setPrimitiveTalentIDValue:(int64_t)value_;
 
-
-
-
-
 - (Talent*)primitiveTalent;
 - (void)setPrimitiveTalent:(Talent*)value;
-
 
 @end

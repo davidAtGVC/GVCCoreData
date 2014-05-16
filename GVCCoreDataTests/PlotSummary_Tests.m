@@ -6,7 +6,7 @@
  *
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <GVCFoundation/GVCFoundation.h>
 #import <GVCCoreData/GVCCoreData.h>
 
@@ -41,27 +41,27 @@
 	GVCLogError(@"Database %@", dbase);
 	
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[PlotSummary entityName] inManagedObjectContext:[self managedObjectContext]];
-	STAssertNotNil(entity, @"Could not find entity 'PlotSummary'");
+	XCTAssertNotNil(entity, @"Could not find entity 'PlotSummary'");
 	
 	NSArray *all = [PlotSummary gvc_findAllObjects:entity forPredicate:nil inContext:[self managedObjectContext]];
-	STAssertNotNil(all, @"Failed to find PlotSummary");
-	STAssertFalse(gvc_IsEmpty(all), @"No PlotSummary found");
+	XCTAssertNotNil(all, @"Failed to find PlotSummary");
+	XCTAssertFalse(gvc_IsEmpty(all), @"No PlotSummary found");
 	
-	STAssertTrue([all count] == 88, @"Incorrect PlotSummary count 88 != %d", [all count]);
+	XCTAssertTrue([all count] == 88, @"Incorrect PlotSummary count 88 != %@", @([all count]));
 }
 
 - (void)testPlotSummaryRelationship
 {
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[PlotSummary entityName] inManagedObjectContext:[self managedObjectContext]];
-	STAssertNotNil(entity, @"Could not find entity 'PlotSummary'");
+	XCTAssertNotNil(entity, @"Could not find entity 'PlotSummary'");
 	
 	NSArray *all = [PlotSummary gvc_findAllObjects:entity forPredicate:nil inContext:[self managedObjectContext]];
-	STAssertNotNil(all, @"Failed to find PlotSummary");
-	STAssertFalse(gvc_IsEmpty(all), @"No PlotSummary found");
+	XCTAssertNotNil(all, @"Failed to find PlotSummary");
+	XCTAssertFalse(gvc_IsEmpty(all), @"No PlotSummary found");
 	
 	for (PlotSummary *record in all)
 	{
-		STAssertTrue(([record movieID] == nil) || ([record movie] != nil), @"PlotSummary (movieID %@) does not have Movie", [record movieID]);
+		XCTAssertTrue(([record movieID] == nil) || ([record movie] != nil), @"PlotSummary (movieID %@) does not have Movie", [record movieID]);
 	}
 }
 

@@ -13,9 +13,6 @@ const struct ReviewRelationships ReviewRelationships = {
 	.movie = @"movie",
 };
 
-const struct ReviewFetchedProperties ReviewFetchedProperties = {
-};
-
 @implementation ReviewID
 @end
 
@@ -41,7 +38,7 @@ const struct ReviewFetchedProperties ReviewFetchedProperties = {
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-	
+
 	if ([key isEqualToString:@"movieIDValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"movieID"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -51,12 +48,7 @@ const struct ReviewFetchedProperties ReviewFetchedProperties = {
 	return keyPaths;
 }
 
-
-
-
 @dynamic movieID;
-
-
 
 - (int64_t)movieIDValue {
 	NSNumber *result = [self movieID];
@@ -64,7 +56,7 @@ const struct ReviewFetchedProperties ReviewFetchedProperties = {
 }
 
 - (void)setMovieIDValue:(int64_t)value_ {
-	[self setMovieID:[NSNumber numberWithLongLong:value_]];
+	[self setMovieID:@(value_)];
 }
 
 - (int64_t)primitiveMovieIDValue {
@@ -73,34 +65,14 @@ const struct ReviewFetchedProperties ReviewFetchedProperties = {
 }
 
 - (void)setPrimitiveMovieIDValue:(int64_t)value_ {
-	[self setPrimitiveMovieID:[NSNumber numberWithLongLong:value_]];
+	[self setPrimitiveMovieID:@(value_)];
 }
-
-
-
-
 
 @dynamic review;
 
-
-
-
-
-
 @dynamic reviewer;
-
-
-
-
-
 
 @dynamic movie;
 
-	
-
-
-
-
-
-
 @end
+

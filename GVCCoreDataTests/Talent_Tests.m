@@ -6,7 +6,7 @@
  *
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <GVCFoundation/GVCFoundation.h>
 #import <GVCCoreData/GVCCoreData.h>
 
@@ -41,13 +41,13 @@
 	GVCLogError(@"Database %@", dbase);
 	
 	NSEntityDescription *talentEntity = [NSEntityDescription entityForName:[Talent entityName] inManagedObjectContext:[self managedObjectContext]];
-	STAssertNotNil(talentEntity, @"Could not find entity 'Talent'");
+	XCTAssertNotNil(talentEntity, @"Could not find entity 'Talent'");
 	
 	NSArray *allTalent = [Talent gvc_findAllObjects:talentEntity forPredicate:nil inContext:[self managedObjectContext]];
-	STAssertNotNil(allTalent, @"Failed to find Talents");
-	STAssertFalse(gvc_IsEmpty(allTalent), @"No Talents found");
+	XCTAssertNotNil(allTalent, @"Failed to find Talents");
+	XCTAssertFalse(gvc_IsEmpty(allTalent), @"No Talents found");
 	
-	STAssertTrue([allTalent count] == 462, @"Incorrect Talent count 462 != %d", [allTalent count]);
+	XCTAssertTrue([allTalent count] == 462, @"Incorrect Talent count 462 != %@", @([allTalent count]));
 }
 
 @end

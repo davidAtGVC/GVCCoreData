@@ -6,7 +6,7 @@
  *
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <GVCFoundation/GVCFoundation.h>
 #import <GVCCoreData/GVCCoreData.h>
 
@@ -38,23 +38,23 @@
 - (void)testMovieCount
 {
 	NSEntityDescription *movieEntity = [NSEntityDescription entityForName:[Movie entityName] inManagedObjectContext:[self managedObjectContext]];
-	STAssertNotNil(movieEntity, @"Could not find entity 'Movie'");
+	XCTAssertNotNil(movieEntity, @"Could not find entity 'Movie'");
 	
 	NSArray *allMovie = [Movie gvc_findAllObjects:movieEntity forPredicate:nil inContext:[self managedObjectContext]];
-	STAssertNotNil(allMovie, @"Failed to find movies");
-	STAssertFalse(gvc_IsEmpty(allMovie), @"No movies found");
+	XCTAssertNotNil(allMovie, @"Failed to find movies");
+	XCTAssertFalse(gvc_IsEmpty(allMovie), @"No movies found");
 	
-	STAssertTrue([allMovie count] == 88, @"Incorrect movie count 88 != %d", [allMovie count]);
+	XCTAssertTrue([allMovie count] == 88, @"Incorrect movie count 88 != %@", @([allMovie count]));
 }
 
 - (void)testStudioRelationship
 {
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[Movie entityName] inManagedObjectContext:[self managedObjectContext]];
-	STAssertNotNil(entity, @"Could not find entity 'Movie'");
+	XCTAssertNotNil(entity, @"Could not find entity 'Movie'");
 	
 	NSArray *all = [Movie gvc_findAllObjects:entity forPredicate:nil inContext:[self managedObjectContext]];
-	STAssertNotNil(all, @"Failed to find Movie");
-	STAssertFalse(gvc_IsEmpty(all), @"No Movie found");
+	XCTAssertNotNil(all, @"Failed to find Movie");
+	XCTAssertFalse(gvc_IsEmpty(all), @"No Movie found");
 	
 	NSEntityDescription *studioEntity = [NSEntityDescription entityForName:[Studio entityName] inManagedObjectContext:[self managedObjectContext]];
 	for (Movie *record in all)
@@ -66,7 +66,7 @@
 
 			if ( studio != nil )
 			{
-				STAssertTrue((studio == nil) || ([record studio] != nil), @"Movie (studioID %@) does not have Studio", [record movieID]);
+				XCTAssertTrue((studio == nil) || ([record studio] != nil), @"Movie (studioID %@) does not have Studio", [record movieID]);
 			}
 			else
 			{

@@ -15,9 +15,6 @@ const struct TalentRelationships TalentRelationships = {
 	.roles = @"roles",
 };
 
-const struct TalentFetchedProperties TalentFetchedProperties = {
-};
-
 @implementation TalentID
 @end
 
@@ -43,7 +40,7 @@ const struct TalentFetchedProperties TalentFetchedProperties = {
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-	
+
 	if ([key isEqualToString:@"talentIDValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"talentID"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -53,26 +50,11 @@ const struct TalentFetchedProperties TalentFetchedProperties = {
 	return keyPaths;
 }
 
-
-
-
 @dynamic firstName;
-
-
-
-
-
 
 @dynamic lastName;
 
-
-
-
-
-
 @dynamic talentID;
-
-
 
 - (int64_t)talentIDValue {
 	NSNumber *result = [self talentID];
@@ -80,7 +62,7 @@ const struct TalentFetchedProperties TalentFetchedProperties = {
 }
 
 - (void)setTalentIDValue:(int64_t)value_ {
-	[self setTalentID:[NSNumber numberWithLongLong:value_]];
+	[self setTalentID:@(value_)];
 }
 
 - (int64_t)primitiveTalentIDValue {
@@ -89,46 +71,32 @@ const struct TalentFetchedProperties TalentFetchedProperties = {
 }
 
 - (void)setPrimitiveTalentIDValue:(int64_t)value_ {
-	[self setPrimitiveTalentID:[NSNumber numberWithLongLong:value_]];
+	[self setPrimitiveTalentID:@(value_)];
 }
-
-
-
-
 
 @dynamic moviesDirected;
 
-	
 - (NSMutableSet*)moviesDirectedSet {
 	[self willAccessValueForKey:@"moviesDirected"];
-  
+
 	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"moviesDirected"];
-  
+
 	[self didAccessValueForKey:@"moviesDirected"];
 	return result;
 }
-	
 
 @dynamic photo;
 
-	
-
 @dynamic roles;
 
-	
 - (NSMutableSet*)rolesSet {
 	[self willAccessValueForKey:@"roles"];
-  
+
 	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"roles"];
-  
+
 	[self didAccessValueForKey:@"roles"];
 	return result;
 }
-	
-
-
-
-
-
 
 @end
+

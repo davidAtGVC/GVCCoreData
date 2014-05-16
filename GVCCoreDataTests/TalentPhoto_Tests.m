@@ -6,7 +6,7 @@
  *
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <GVCFoundation/GVCFoundation.h>
 #import <GVCCoreData/GVCCoreData.h>
 
@@ -41,27 +41,27 @@
 	GVCLogError(@"Database %@", dbase);
 	
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[TalentPhoto entityName] inManagedObjectContext:[self managedObjectContext]];
-	STAssertNotNil(entity, @"Could not find entity 'TalentPhoto'");
+	XCTAssertNotNil(entity, @"Could not find entity 'TalentPhoto'");
 	
 	NSArray *all = [TalentPhoto gvc_findAllObjects:entity forPredicate:nil inContext:[self managedObjectContext]];
-	STAssertNotNil(all, @"Failed to find TalentPhoto");
-	STAssertFalse(gvc_IsEmpty(all), @"No TalentPhoto found");
+	XCTAssertNotNil(all, @"Failed to find TalentPhoto");
+	XCTAssertFalse(gvc_IsEmpty(all), @"No TalentPhoto found");
 	
-	STAssertTrue([all count] == 461, @"Incorrect TalentPhoto count 461 != %d", [all count]);
+	XCTAssertTrue([all count] == 461, @"Incorrect TalentPhoto count 461 != %@", @([all count]));
 }
 
 - (void)testTalentPhotoRelationship
 {
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[TalentPhoto entityName] inManagedObjectContext:[self managedObjectContext]];
-	STAssertNotNil(entity, @"Could not find entity 'TalentPhoto'");
+	XCTAssertNotNil(entity, @"Could not find entity 'TalentPhoto'");
 	
 	NSArray *all = [TalentPhoto gvc_findAllObjects:entity forPredicate:nil inContext:[self managedObjectContext]];
-	STAssertNotNil(all, @"Failed to find TalentPhoto");
-	STAssertFalse(gvc_IsEmpty(all), @"No TalentPhoto found");
+	XCTAssertNotNil(all, @"Failed to find TalentPhoto");
+	XCTAssertFalse(gvc_IsEmpty(all), @"No TalentPhoto found");
 
 	for (TalentPhoto *record in all)
 	{
-		STAssertTrue(([record talentID] == nil) || ([record talent] != nil), @"TalentPhoto (talentId %@) does not have Talent", [record talentID]);
+		XCTAssertTrue(([record talentID] == nil) || ([record talent] != nil), @"TalentPhoto (talentId %@) does not have Talent", [record talentID]);
 	}
 }
 

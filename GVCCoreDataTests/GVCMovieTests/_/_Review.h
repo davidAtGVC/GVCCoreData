@@ -14,14 +14,7 @@ extern const struct ReviewRelationships {
 	__unsafe_unretained NSString *movie;
 } ReviewRelationships;
 
-extern const struct ReviewFetchedProperties {
-} ReviewFetchedProperties;
-
 @class Movie;
-
-
-
-
 
 @interface ReviewID : NSManagedObjectID {}
 @end
@@ -32,60 +25,29 @@ extern const struct ReviewFetchedProperties {
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 - (ReviewID*)objectID;
 
-
-
-
-
 @property (nonatomic, strong) NSNumber* movieID;
 
-
-
-@property int64_t movieIDValue;
+@property (atomic) int64_t movieIDValue;
 - (int64_t)movieIDValue;
 - (void)setMovieIDValue:(int64_t)value_;
 
 //- (BOOL)validateMovieID:(id*)value_ error:(NSError**)error_;
 
-
-
-
-
 @property (nonatomic, strong) NSString* review;
-
-
 
 //- (BOOL)validateReview:(id*)value_ error:(NSError**)error_;
 
-
-
-
-
 @property (nonatomic, strong) NSString* reviewer;
 
-
-
 //- (BOOL)validateReviewer:(id*)value_ error:(NSError**)error_;
-
-
-
-
 
 @property (nonatomic, strong) Movie *movie;
 
 //- (BOOL)validateMovie:(id*)value_ error:(NSError**)error_;
 
-
-
-
-
-@end
-
-@interface _Review (CoreDataGeneratedAccessors)
-
 @end
 
 @interface _Review (CoreDataGeneratedPrimitiveAccessors)
-
 
 - (NSNumber*)primitiveMovieID;
 - (void)setPrimitiveMovieID:(NSNumber*)value;
@@ -93,24 +55,13 @@ extern const struct ReviewFetchedProperties {
 - (int64_t)primitiveMovieIDValue;
 - (void)setPrimitiveMovieIDValue:(int64_t)value_;
 
-
-
-
 - (NSString*)primitiveReview;
 - (void)setPrimitiveReview:(NSString*)value;
-
-
-
 
 - (NSString*)primitiveReviewer;
 - (void)setPrimitiveReviewer:(NSString*)value;
 
-
-
-
-
 - (Movie*)primitiveMovie;
 - (void)setPrimitiveMovie:(Movie*)value;
-
 
 @end

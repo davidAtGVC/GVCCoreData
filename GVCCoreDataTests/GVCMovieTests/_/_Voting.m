@@ -13,9 +13,6 @@ const struct VotingRelationships VotingRelationships = {
 	.movie = @"movie",
 };
 
-const struct VotingFetchedProperties VotingFetchedProperties = {
-};
-
 @implementation VotingID
 @end
 
@@ -41,7 +38,7 @@ const struct VotingFetchedProperties VotingFetchedProperties = {
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-	
+
 	if ([key isEqualToString:@"movieIDValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"movieID"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -61,12 +58,7 @@ const struct VotingFetchedProperties VotingFetchedProperties = {
 	return keyPaths;
 }
 
-
-
-
 @dynamic movieID;
-
-
 
 - (int64_t)movieIDValue {
 	NSNumber *result = [self movieID];
@@ -74,7 +66,7 @@ const struct VotingFetchedProperties VotingFetchedProperties = {
 }
 
 - (void)setMovieIDValue:(int64_t)value_ {
-	[self setMovieID:[NSNumber numberWithLongLong:value_]];
+	[self setMovieID:@(value_)];
 }
 
 - (int64_t)primitiveMovieIDValue {
@@ -83,16 +75,10 @@ const struct VotingFetchedProperties VotingFetchedProperties = {
 }
 
 - (void)setPrimitiveMovieIDValue:(int64_t)value_ {
-	[self setPrimitiveMovieID:[NSNumber numberWithLongLong:value_]];
+	[self setPrimitiveMovieID:@(value_)];
 }
 
-
-
-
-
 @dynamic numberOfVotes;
-
-
 
 - (int64_t)numberOfVotesValue {
 	NSNumber *result = [self numberOfVotes];
@@ -100,7 +86,7 @@ const struct VotingFetchedProperties VotingFetchedProperties = {
 }
 
 - (void)setNumberOfVotesValue:(int64_t)value_ {
-	[self setNumberOfVotes:[NSNumber numberWithLongLong:value_]];
+	[self setNumberOfVotes:@(value_)];
 }
 
 - (int64_t)primitiveNumberOfVotesValue {
@@ -109,16 +95,10 @@ const struct VotingFetchedProperties VotingFetchedProperties = {
 }
 
 - (void)setPrimitiveNumberOfVotesValue:(int64_t)value_ {
-	[self setPrimitiveNumberOfVotes:[NSNumber numberWithLongLong:value_]];
+	[self setPrimitiveNumberOfVotes:@(value_)];
 }
 
-
-
-
-
 @dynamic runningAverage;
-
-
 
 - (double)runningAverageValue {
 	NSNumber *result = [self runningAverage];
@@ -126,7 +106,7 @@ const struct VotingFetchedProperties VotingFetchedProperties = {
 }
 
 - (void)setRunningAverageValue:(double)value_ {
-	[self setRunningAverage:[NSNumber numberWithDouble:value_]];
+	[self setRunningAverage:@(value_)];
 }
 
 - (double)primitiveRunningAverageValue {
@@ -135,20 +115,10 @@ const struct VotingFetchedProperties VotingFetchedProperties = {
 }
 
 - (void)setPrimitiveRunningAverageValue:(double)value_ {
-	[self setPrimitiveRunningAverage:[NSNumber numberWithDouble:value_]];
+	[self setPrimitiveRunningAverage:@(value_)];
 }
-
-
-
-
 
 @dynamic movie;
 
-	
-
-
-
-
-
-
 @end
+
