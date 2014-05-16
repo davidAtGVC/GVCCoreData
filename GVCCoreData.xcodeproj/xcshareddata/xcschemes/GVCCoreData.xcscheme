@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "05D1859B1503C47900EDBE80"
-               BuildableName = "GVCCoreDataTests.octest"
+               BuildableName = "GVCCoreDataTests.xctest"
                BlueprintName = "GVCCoreDataTests"
                ReferencedContainer = "container:GVCCoreData.xcodeproj">
             </BuildableReference>
